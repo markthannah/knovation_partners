@@ -1,0 +1,15 @@
+<div style="padding-top: 20px;">
+  <footer class="footer">
+    <div class="container">
+      <p class="navbar-text pull-left"> Logo, Links to things, etc.</p>
+
+      <div class="navbar-btn btn pull-right">
+        <% if user_signed_in? %>
+           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-default btn-controls" %>
+           <% else %>
+           <%= link_to "Log in", new_user_session_path, class: "btn btn-md btn-hover btn-primary" %>
+         <% end %>
+       </div>
+    </div>
+  </footer>
+</div>
