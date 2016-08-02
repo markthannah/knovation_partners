@@ -1,0 +1,60 @@
+// Place all the styles related to the resources controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.actions {
+ text-align: right;
+}
+
+.iconstyle {
+  color:gray;
+}
+
+.icontext {
+  color:gray;
+  white-space: pre-line;
+}
+
+.wellbig{
+  background: white;
+}
+
+.wellsmall{
+  background: white;
+  width: 12%;
+  color: gray;
+  padding-right: 10px;
+}
+
+.media-text {
+  padding-left: 8px;
+  padding-right: 12px;
+  padding-top: 8px;
+}
+
+.icpad {
+  padding-right: 2px;
+}
+
+.form-long {
+  overflow-y: auto;
+  height: 100px;
+}
+
+.form-inline div {
+  width:181px;
+  text-align:center;
+}
+
+.drop-down-group {
+  white-space: pre-line;
+}
+
+.form-long {
+  overflow-y: auto;
+  height: 115px;
+}
+
+.info-icon {
+  color: rgb(40, 96, 144);
+}

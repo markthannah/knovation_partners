@@ -1,0 +1,52 @@
+<div class="form_top container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Language Arts Resources</h1>
+  <% @resources = Resource.subject("Language Arts")%>
+  <% @resources.each do |resource| %>
+    <div class="media well wellbig">
+      <div class="media-left media-middle">
+        <a href="#">
+          <a target="_blank" class="btn btn-default btn-sm" href="<%= resource.url %>">
+            <i class="fa fa-send fa-2x iconstyle"></i> <div class="icontext"><%= resource.lrt %></div>
+          </a>
+      </div>
+        <div class="media-body media-text">
+          <h4 class="media-heading">
+          <a target="_blank" href="<%= resource.url %>">
+            <%= raw resource.title %>
+          </a>
+        </h4>
+        <%= raw resource.description.truncate(410) %>
+      </div>
+      <div class="media-right well wellsmall">
+        <span class="fa fa-rocket icpad"></span>
+        <%= resource.subject %></br>
+        <span class="fa fa-graduation-cap icpad"></span>
+        <%= resource.grade %></br>
+        <span class="fa fa-language icpad"></span>
+        <%= resource.language %></br>
+
+      </div>
+    </div>
+
+      <% if user_signed_in? %>
+        <div class="actions" style="margin-top:-15px;">
+          <td><%= link_to edit_resource_path(resource) do %>
+            <span class="fa fa-edit"></span>
+            Edit
+          <% end %></td>
+          <td><%= link_to resource, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <span class="fa fa-trash-o"></span>
+            Delete
+          <% end %></td>
+        </div>
+      <% end %>
+
+    <% end %>
+
+  <br>
+  <% if user_signed_in? %>
+  <%= link_to 'New Resource', new_resource_path, class: "btn btn-primary" %>
+  <% end %>
+</div>

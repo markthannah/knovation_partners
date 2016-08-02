@@ -1,0 +1,73 @@
+<div class="container form_top">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Title:</strong>
+    <%=raw @resource.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%=raw @resource.description %>
+  </p>
+
+  <p>
+    <strong>URL:</strong>
+    <%= @resource.url %>
+  </p>
+
+  <p>
+    <strong>LRT:</strong>
+    <%= @resource.lrt %>
+  </p>
+
+  <p>
+    <strong>Subject:</strong>
+    <%= @resource.subject %>
+  </p>
+
+  <p>
+    <strong>Keywords:</strong>
+    <%= @resource.keyword.gsub(/(?:\n\r?|\r\n?)/, ', ') %>
+  </p>
+
+  <p>
+    <strong>Author/Publisher:</strong>
+    <%= @resource.author_publisher %>
+  </p>
+
+  <p>
+    <strong>Academic Levels:</strong>
+    <%= @resource.grade %>
+  </p>
+
+  <p>
+    <strong>Roles:</strong>
+    <%= @resource.role %>
+  </p>
+
+  <p>
+    <strong>Languages:</strong>
+    <%= @resource.language %>
+  </p>
+
+  <p>
+    <strong>Readability:</strong>
+    <%= @resource.readability %>
+  </p>
+
+  <p>
+    <strong>Standards:</strong>
+    <%=raw @resource.standard.gsub(/(?:\n\r?|\r\n?)/, '<>') %>
+  </p>
+
+
+  <div class="form-group">
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_resource_path(@resource), class: "btn btn-primary" %>
+    <% end %>
+
+    <%= link_to 'Back to Resources', resources_path, class: "btn btn-info" %>
+  </div>
+</div>
