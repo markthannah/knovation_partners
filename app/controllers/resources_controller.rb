@@ -1,12 +1,12 @@
 class ResourcesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :science, :math, :ela, :socialstudies]
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
   # GET /resources
   # GET /resources.json
   def index
     @resources = Resource.all
-  end
+    end
 
   # GET /resources/1
   # GET /resources/1.json
@@ -24,19 +24,75 @@ class ResourcesController < ApplicationController
 
   def science
     @resources = Resource.all
+
+    @resources = Resource.subject('Science')
+    if params[:elementary_science]
+      @resources = Resource.elementary_science
+    end
+
+    if params[:middle_science]
+      @resources = Resource.middle_science
+    end
+
+    if params[:high_science]
+      @resources = Resource.high_science
+    end
+
   end
 
   def math
     @resources = Resource.all
-  end
+
+    @resources = Resource.subject('Math')
+    if params[:elementary_math]
+      @resources = Resource.elementary_math
+    end
+
+    if params[:middle_math]
+      @resources = Resource.middle_math
+    end
+
+    if params[:high_math]
+      @resources = Resource.high_math
+    end
+
+    end
 
   def ela
     @resources = Resource.all
+
+    @resources = Resource.subject('Language Arts')
+    if params[:elementary_ela]
+      @resources = Resource.elementary_ela
+    end
+
+    if params[:middle_ela]
+      @resources = Resource.middle_ela
+    end
+
+    if params[:high_ela]
+      @resources = Resource.high_ela
+    end
+
   end
 
   def socialstudies
     @resources = Resource.all
-  end
+
+    @resources = Resource.subject('Social Studies')
+    if params[:elementary_ss]
+      @resources = Resource.elementary_ss
+    end
+
+    if params[:middle_ss]
+      @resources = Resource.middle_ss
+    end
+
+    if params[:high_ss]
+      @resources = Resource.high_ss
+    end
+
+    end
 
   # POST /resources
   # POST /resources.json

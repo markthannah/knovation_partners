@@ -2,7 +2,14 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Math Resources</h1>
-  <% @resources = Resource.subject("Math")%>
+
+  <div class="btn-group">
+    <%= link_to 'All', math_path, class: "btn btn-primary"%>
+    <%= link_to 'Elementary', math_path(:elementary_math => true), class: "btn btn-primary"%>
+    <%= link_to 'Middle', math_path(:middle_math => true), class: "btn btn-primary" %>
+    <%= link_to 'High', math_path(:high_math => true), class: "btn btn-primary" %>
+  </div>
+
   <% @resources.each do |resource| %>
     <div class="media well wellbig">
       <div class="media-left media-middle">
@@ -42,7 +49,6 @@
           <% end %></td>
         </div>
       <% end %>
-
     <% end %>
 
   <br>

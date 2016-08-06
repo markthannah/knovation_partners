@@ -49,9 +49,9 @@
           <%= f.select(:grade, options_for_select([['Elementary'], ['Middle'], ['High']], {:selected => @resource.grade}),:prompt => "Select One") %>
 
         </div>
-        <div class="form-group drop-down-group">
+        <div class="form-group drop-down-group"  style="margin-top: 20px;">
           <%= f.label :lrt, "LRT" %>
-          <%= f.select(:lrt, options_for_select([['Audio'], ['Assessment'], ['Interactive Media'], ['Learning Module'], ['Reference Material'], ['Video']], {:selected => @resource.lrt}),:prompt => "Select One") %>
+          <%= f.select(:lrt, options_for_select([['3-D Printing Plan'], ['Activity'], ['App'], ['Article'], ['Assessment'], ['Audio Content'], ['ebook'], ['Interactive Media'], ['Learning Game'], ['Learning Module'], ['Lesson Plan'], ['Primary Source Document'], ['Professional Learning Resource'], ['Reference Material'], ['Student-Created Material'], ['Test Preparation Material'], ['Video'], ['Virtual Course'], ['Visual Material'], ['Website'], ['Whiteboard Resource']], {:selected => @resource.lrt}),:prompt => "Select One") %>
 
         </div>
         <div class="form-group drop-down-group">
@@ -61,7 +61,7 @@
         </div>
         <div class="form-group drop-down-group">
           <%= f.label :language %>
-          <%= f.select(:language, options_for_select([['Dutch'], ['English'], ['French'], ['German'], ['Spanish'], ['Tagalog']], {:selected => @resource.language}),:prompt => "Select One") %>
+          <%= f.select(:language, options_for_select([['English'], ['Arabic'], ['Chinese'], ['Dutch'], ['French'], ['German'], ['Haitian Creole'], ['Hmong'], ['Japanese'], ['Korean'], ['Portuguese'], ['Russian'], ['Spanish'], ['Tagalog'], ['Urdu'], ['Vietnamese']], {:selected => @resource.language}),:prompt => "Select One") %>
 
         </div>
         <div class="form-group drop-down-group">

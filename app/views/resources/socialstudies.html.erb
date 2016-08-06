@@ -2,7 +2,14 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Social Studies Resources</h1>
-  <% @resources = Resource.subject("Social Studies")%>
+
+  <div class="btn-group">
+    <%= link_to 'All', socialstudies_path, class: "btn btn-primary" %>
+    <%= link_to 'Elementary', socialstudies_path(:elementary_ss => true), class: "btn btn-primary" %>
+    <%= link_to 'Middle', socialstudies_path(:middle_ss => true), class: "btn btn-primary" %>
+    <%= link_to 'High', socialstudies_path(:high_ss => true), class: "btn btn-primary" %>
+  </div>
+
   <% @resources.each do |resource| %>
     <div class="media well wellbig">
       <div class="media-left media-middle">
