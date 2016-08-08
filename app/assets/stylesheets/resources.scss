@@ -1,29 +1,49 @@
 // Place all the styles related to the resources controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-outline {
+    background-color: white;
+    color: inherit;
+    transition: all .5s;
+    color: #46b8da;
+}
 
 .actions {
  text-align: right;
 }
 
+.resource-button {
+  white-space:normal !important;
+  width:110px !important;
+  height:70px !important;
+  vertical-align: middle;
+  display: table-cell;
+  float: none;
+}
+
 .iconstyle {
   color:gray;
+  font-size: 15px;
 }
 
 .icontext {
   color:gray;
-  white-space: pre-line;
 }
 
 .wellbig{
   background: white;
+  margin-top: 10px;
+  padding-left: 40px;
+}
+
+.vcenter {
+  margin-top: 1.5%;
+  margin-bottom: 1%;
 }
 
 .wellsmall{
-  background: white;
   width: 14%;
   color: gray;
-  padding-right: 10px;
 }
 
 .media-text {
@@ -57,4 +77,19 @@
 
 .info-icon {
   color: rgb(40, 96, 144);
+}
+
+.support-text {
+  font-size: 12px;
+}
+.support-text:hover {
+  background-color: transparent;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.body-text {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
