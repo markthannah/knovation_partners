@@ -1,11 +1,11 @@
 module ResourcesHelper
 
-  def checked(area)
+  def rolecheck(area)
   @resource.role.nil? ? false : @resource.role.match(area)
-end
+  end
 
-  def checked(area)
+  def languagecheck(area)
   @resource.language.nil? ? false : @resource.language.match(area)
-end
+  end
 
 end

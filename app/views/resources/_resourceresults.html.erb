@@ -2,7 +2,7 @@
   <div class="well wellbig vertical-container">
     <div class="row">
 
-    <div class="col-xs-3 col-md-2 vcenter">
+    <!-- <div class="col-xs-3 col-md-2 vcenter">
         <%= link_to resource, target: "_blank", class: "btn btn-default resource-button" do%>
         <i class="fa fa-send fa-2x iconstyle">
           <div>
@@ -10,7 +10,7 @@
           </div>
         </i>
         <% end %>
-    </div>
+    </div> -->
 
     <div class="col-xs-9 col-md-8 vcenter">
         <h4 class="media-heading">
@@ -19,9 +19,13 @@
       <%= raw resource.description.truncate(300) %>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-md-4">
       <div class="media-right panel panel-default wellsmall" style="padding-left: 0px;">
         <div class="panel-body body-text">
+          <div class="media">
+            <div class="media-object pull-right">
+              <button class="btn btn-info btn-outline option-button" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus"></span></button>
+            </div>
           <span class="fa fa-rocket icpad"></span>
           <%= resource.subject %></br>
 
@@ -31,9 +35,9 @@
           <span class="fa fa-language icpad"></span>
           <%= resource.language %></br>
         </div>
-        <div class="panel-footer" style= "text-align: center; padding: 5px;">
-          <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-outline btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Details</button>
+
+        <!-- <div class="panel-footer" style= "text-align: center; padding: 5px;">
+        <button type="button" class="btn btn-outline btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Details</button> -->
 
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
@@ -113,7 +117,7 @@
 
           </div>
         </div>
-        </div>
+      </div>
       </div>
     </div>
     </div>

@@ -69,15 +69,15 @@
         <div class="panel-heading">Roles</div>
         <div class="panel-body" style="padding-left: 30px;">
           <div>
-            <%= check_box_tag 'resource[role][]', 'Student', checked('Student'), id: 'role_student' %>&nbsp;
+            <%= check_box_tag 'resource[role][]', 'Student', rolecheck('Student'), id: 'role_student' %>&nbsp;
             <%= label_tag 'role_student', 'Student' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[role][]', 'Teacher', checked('Teacher'), id: 'role_teacher' %>&nbsp;
+            <%= check_box_tag 'resource[role][]', 'Teacher', rolecheck('Teacher'), id: 'role_teacher' %>&nbsp;
             <%= label_tag 'role_teacher', 'Teacher' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[role][]', 'Admin', checked('Admin'), id: 'role_admin' %>&nbsp;
+            <%= check_box_tag 'resource[role][]', 'Admin', rolecheck('Admin'), id: 'role_admin' %>&nbsp;
             <%= label_tag 'role_admin', 'Admin' %>
           </div>
       </div>
@@ -90,77 +90,77 @@
         <div class="panel-body" style="padding-left: 30px;">
           <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'English', checked('English'), id: 'language_english' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'English', languagecheck('English'), id: 'language_english' %>&nbsp;
             <%= label_tag 'language_english', 'English' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Arabic', checked('Arabic'), id: 'language_arabic' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Arabic', languagecheck('Arabic'), id: 'language_arabic' %>&nbsp;
             <%= label_tag 'language_arabic', 'Arabic' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Chinese', checked('Chinese'), id: 'language_chinese' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Chinese', languagecheck('Chinese'), id: 'language_chinese' %>&nbsp;
             <%= label_tag 'language_chinese', 'Chinese' %>
           </div>
         </div>
         <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'Dutch', checked('Dutch'), id: 'language_dutch' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Dutch', languagecheck('Dutch'), id: 'language_dutch' %>&nbsp;
             <%= label_tag 'language_dutch', 'Dutch' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'French', checked('French'), id: 'language_french' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'French', languagecheck('French'), id: 'language_french' %>&nbsp;
             <%= label_tag 'language_french', 'French' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'German', checked('German'), id: 'language_german' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'German', languagecheck('German'), id: 'language_german' %>&nbsp;
             <%= label_tag 'language_german', 'German' %>
           </div>
         </div>
         <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'Haitian', checked('Haitian'), id: 'language_haitiancreole' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Haitian', languagecheck('Haitian'), id: 'language_haitiancreole' %>&nbsp;
             <%= label_tag 'language_haitiancreole', 'Haitian' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Hmong', checked('Hmong'), id: 'language_hmong' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Hmong', languagecheck('Hmong'), id: 'language_hmong' %>&nbsp;
             <%= label_tag 'language_hmong', 'Hmong' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Japanese', checked('Japanese'), id: 'language_japanese' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Japanese', languagecheck('Japanese'), id: 'language_japanese' %>&nbsp;
             <%= label_tag 'language_japanese', 'Japanese' %>
           </div>
         </div>
         <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'Korean', checked('Korean'), id: 'language_korean' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Korean', languagecheck('Korean'), id: 'language_korean' %>&nbsp;
             <%= label_tag 'language_korean', 'Korean' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Portugeuse', checked('Portugeuse'), id: 'language_portugeuse' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Portugeuse', languagecheck('Portugeuse'), id: 'language_portugeuse' %>&nbsp;
             <%= label_tag 'language_portugeuse', 'Portugeuse' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Russian', checked('Russian'), id: 'language_russian' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Russian', languagecheck('Russian'), id: 'language_russian' %>&nbsp;
             <%= label_tag 'language_russian', 'Russian' %>
           </div>
         </div>
         <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'Spanish', checked('Spanish'), id: 'language_spanish' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Spanish', languagecheck('Spanish'), id: 'language_spanish' %>&nbsp;
             <%= label_tag 'language_spanish', 'Spanish' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Tagalog', checked('Tagalog'), id: 'language_tagalog' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Tagalog', languagecheck('Tagalog'), id: 'language_tagalog' %>&nbsp;
             <%= label_tag 'language_tagalog', 'Tagalog' %>
           </div>
           <div>
-            <%= check_box_tag 'resource[language][]', 'Urdu', checked('Urdu'), id: 'language_urdu' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Urdu', languagecheck('Urdu'), id: 'language_urdu' %>&nbsp;
             <%= label_tag 'language_urdu', 'Urdu' %>
           </div>
         </div>
         <div class="col-md-2">
           <div>
-            <%= check_box_tag 'resource[language][]', 'Vietnamese', checked('Vietnamese'), id: 'language_vietnamese' %>&nbsp;
+            <%= check_box_tag 'resource[language][]', 'Vietnamese', languagecheck('Vietnamese'), id: 'language_vietnamese' %>&nbsp;
             <%= label_tag 'language_vietnamese', 'Vietnamese' %>
           </div>
         </div>

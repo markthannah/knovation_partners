@@ -9,8 +9,8 @@ one:
   keyword: MyText
   author/publisher: MyString
   grade: MyText
-  role: MyText
-  language: 
+  role:
+  language:
   standard: MyText
 
 two:
@@ -22,6 +22,6 @@ two:
   keyword: MyText
   author/publisher: MyString
   grade: MyText
-  role: MyText
-  language: 
+  role: 
+  language:
   standard: MyText
