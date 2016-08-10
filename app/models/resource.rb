@@ -19,6 +19,14 @@ class Resource < ActiveRecord::Base
   scope :middle_ss, -> {where(grade: 'Middle').where(subject: 'Social Studies')}
   scope :high_ss, -> {where(grade: 'High').where(subject: 'Social Studies')}
 
+  before_save do
+    self.role.gsub!(/[\[\]\"]/, "") if attribute_present?("role")
+  end
+
+  before_save do
+    self.language.gsub!(/[\[\]\"]/, "") if attribute_present?("language")
+  end
+
   validates :url, presence: true
   validates :title, presence: true
   validates :author_publisher, presence: true

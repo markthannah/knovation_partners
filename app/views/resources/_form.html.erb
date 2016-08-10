@@ -49,19 +49,9 @@
           <%= f.select(:grade, options_for_select([['Elementary'], ['Middle'], ['High']], {:selected => @resource.grade}),:prompt => "Select One") %>
 
         </div>
-        <div class="form-group drop-down-group"  style="margin-top: 20px;">
+        <div class="form-group drop-down-group" >
           <%= f.label :lrt, "LRT" %>
           <%= f.select(:lrt, options_for_select([['3-D Printing Plan'], ['Activity'], ['App'], ['Article'], ['Assessment'], ['Audio Content'], ['ebook'], ['Interactive Media'], ['Learning Game'], ['Learning Module'], ['Lesson Plan'], ['Primary Source Document'], ['Professional Learning Resource'], ['Reference Material'], ['Student-Created Material'], ['Test Preparation Material'], ['Video'], ['Virtual Course'], ['Visual Material'], ['Website'], ['Whiteboard Resource']], {:selected => @resource.lrt}),:prompt => "Select One") %>
-
-        </div>
-        <div class="form-group drop-down-group">
-          <%= f.label :role %>
-          <%= f.select(:role, options_for_select([['Admin'], ['Student'], ['Teacher']], {:selected => @resource.role}),:prompt => "Select One") %>
-
-        </div>
-        <div class="form-group drop-down-group">
-          <%= f.label :language %>
-          <%= f.select(:language, options_for_select([['English'], ['Arabic'], ['Chinese'], ['Dutch'], ['French'], ['German'], ['Haitian Creole'], ['Hmong'], ['Japanese'], ['Korean'], ['Portuguese'], ['Russian'], ['Spanish'], ['Tagalog'], ['Urdu'], ['Vietnamese']], {:selected => @resource.language}),:prompt => "Select One") %>
 
         </div>
         <div class="form-group drop-down-group">
@@ -73,6 +63,111 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">Roles</div>
+        <div class="panel-body" style="padding-left: 30px;">
+          <div>
+            <%= check_box_tag 'resource[role][]', 'Student', checked('Student'), id: 'role_student' %>&nbsp;
+            <%= label_tag 'role_student', 'Student' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[role][]', 'Teacher', checked('Teacher'), id: 'role_teacher' %>&nbsp;
+            <%= label_tag 'role_teacher', 'Teacher' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[role][]', 'Admin', checked('Admin'), id: 'role_admin' %>&nbsp;
+            <%= label_tag 'role_admin', 'Admin' %>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">Languages</div>
+        <div class="panel-body" style="padding-left: 30px;">
+          <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'English', checked('English'), id: 'language_english' %>&nbsp;
+            <%= label_tag 'language_english', 'English' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Arabic', checked('Arabic'), id: 'language_arabic' %>&nbsp;
+            <%= label_tag 'language_arabic', 'Arabic' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Chinese', checked('Chinese'), id: 'language_chinese' %>&nbsp;
+            <%= label_tag 'language_chinese', 'Chinese' %>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Dutch', checked('Dutch'), id: 'language_dutch' %>&nbsp;
+            <%= label_tag 'language_dutch', 'Dutch' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'French', checked('French'), id: 'language_french' %>&nbsp;
+            <%= label_tag 'language_french', 'French' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'German', checked('German'), id: 'language_german' %>&nbsp;
+            <%= label_tag 'language_german', 'German' %>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Haitian', checked('Haitian'), id: 'language_haitiancreole' %>&nbsp;
+            <%= label_tag 'language_haitiancreole', 'Haitian' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Hmong', checked('Hmong'), id: 'language_hmong' %>&nbsp;
+            <%= label_tag 'language_hmong', 'Hmong' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Japanese', checked('Japanese'), id: 'language_japanese' %>&nbsp;
+            <%= label_tag 'language_japanese', 'Japanese' %>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Korean', checked('Korean'), id: 'language_korean' %>&nbsp;
+            <%= label_tag 'language_korean', 'Korean' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Portugeuse', checked('Portugeuse'), id: 'language_portugeuse' %>&nbsp;
+            <%= label_tag 'language_portugeuse', 'Portugeuse' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Russian', checked('Russian'), id: 'language_russian' %>&nbsp;
+            <%= label_tag 'language_russian', 'Russian' %>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Spanish', checked('Spanish'), id: 'language_spanish' %>&nbsp;
+            <%= label_tag 'language_spanish', 'Spanish' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Tagalog', checked('Tagalog'), id: 'language_tagalog' %>&nbsp;
+            <%= label_tag 'language_tagalog', 'Tagalog' %>
+          </div>
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Urdu', checked('Urdu'), id: 'language_urdu' %>&nbsp;
+            <%= label_tag 'language_urdu', 'Uru' %>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <%= check_box_tag 'resource[language][]', 'Vietnamese', checked('Vietnamese'), id: 'language_vietnamese' %>&nbsp;
+            <%= label_tag 'language_vietnamese', 'Vietnamese' %>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="form-group col-xs-4">
       <%= f.label :keyword, "Keywords" %>
