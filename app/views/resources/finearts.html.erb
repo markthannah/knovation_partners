@@ -1,0 +1,17 @@
+<div class="form_top container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Fine Arts Resources</h1>
+
+  <div class="row">
+    <div class="col-xs-4 col-sm-offset-3 col-sm-4 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-5"></div>
+        <%= link_to 'All', finearts_path, class: "btn btn-primary"%>
+      <div class="btn-group">
+        <%= link_to 'Elementary', finearts_path(:elementary_finearts => true), class: "btn btn-info" %>
+        <%= link_to 'Middle', finearts_path(:middle_finearts => true), class: "btn btn-info" %>
+        <%= link_to 'High', finearts_path(:high_finearts => true), class: "btn btn-info" %>
+      </div>
+    </div>
+
+    <%= render 'resources/resourceresults' %>
+</div>

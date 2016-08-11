@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "math" => "resources#math"
   get "science" => "resources#science"
   get "socialstudies" => "resources#socialstudies"
+  get "finearts" => "resources#finearts"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

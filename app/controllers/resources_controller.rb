@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :science, :math, :ela, :socialstudies]
+  before_action :authenticate_user!, except: [:index, :show, :science, :finearts, :math, :ela, :socialstudies]
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
   # GET /resources
@@ -20,6 +20,24 @@ class ResourcesController < ApplicationController
 
   # GET /resources/1/edit
   def edit
+  end
+
+  def finearts
+    @resources = Resource.all
+
+    @resources = Resource.subject('Fine Arts')
+    if params[:elementary_finearts]
+      @resources = Resource.elementary_finearts
+    end
+
+    if params[:middle_finearts]
+      @resources = Resource.middle_finearts
+    end
+
+    if params[:high_finearts]
+      @resources = Resource.high_finearts
+    end
+
   end
 
   def science

@@ -19,6 +19,10 @@ class Resource < ActiveRecord::Base
   scope :middle_ss, -> {where(grade: 'Middle').where(subject: 'Social Studies')}
   scope :high_ss, -> {where(grade: 'High').where(subject: 'Social Studies')}
 
+  scope :elementary_finearts, -> {where(grade: 'Elementary').where(subject: 'Fine Arts')}
+  scope :middle_finearts, -> {where(grade: 'Middle').where(subject: 'Fine Arts')}
+  scope :high_finearts, -> {where(grade: 'High').where(subject: 'Fine Arts')}
+
   before_save do
     self.role.gsub!(/[\[\]\"]/, "") if attribute_present?("role")
   end

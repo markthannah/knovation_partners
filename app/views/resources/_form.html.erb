@@ -18,7 +18,7 @@
     </div>
     <div class="form-group col-xs-6">
       <%= f.label :title %>
-      <i class="fa fa-info-circle info-icon" aria-hidden="true" data-toggle="popover" title="Title Information"
+      <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="Title Information"
       data-content="Select text in this field to apply the same style used for this evaluation."></i>
       <%= f.text_area :title, class: "form-control editable" %>
     </div>
@@ -26,13 +26,15 @@
 
   <div class="form-group">
     <%= f.label :description %>
-    <i class="fa fa-info-circle info-icon" aria-hidden="true" data-toggle="popover" title="Description Information"
+    <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="Description Information"
     data-content="Select text in this field to apply the same style used for this evaluation"></i>
     <%= f.text_area :description, class: "form-control editable form-long", rows: "7" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :author_publisher, "Author/Publisher" %><br>
+    <%= f.label :author_publisher, "Publisher/Author" %>
+    <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="Description Information"
+    data-content=" Please include Publisher, followed by Author."></i>
     <%= f.text_field :author_publisher, class: "form-control" %>
   </div>
 
@@ -42,7 +44,7 @@
       <div class="form-inline">
         <div class="form-group drop-down-group" style="height: 85px;">
           <%= f.label :subject %>
-          <%= f.select(:subject, options_for_select([['Math'], ['Science'], ['Social Studies'], ['Language Arts']], {:selected => @resource.subject}),:prompt => "Select One") %>
+          <%= f.select(:subject, options_for_select([['Math'], ['Science'], ['Social Studies'], ['Language Arts'], ['Fine Arts']], {:selected => @resource.subject}),:prompt => "Select One") %>
         </div>
         <div class="form-group drop-down-group">
           <%= f.label :grade, "Academic Level" %>
@@ -171,14 +173,14 @@
   <div class="row">
     <div class="form-group col-xs-4">
       <%= f.label :keyword, "Keywords" %>
-      <i class="fa fa-info-circle info-icon" aria-hidden="true" data-toggle="popover" title="Keyword Information"
-      data-content="Please select enter after adding each keyword. This will separate kewyords with a comma on the page that displays this resource."></i>
+      <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="Keyword Information"
+      data-content="Please select <Enter> after adding each keyword. This will separate kewyords with a comma on the page that displays this resource."></i>
       <%= f.text_area :keyword, class: "form-control form-long", rows: "5" %>
     </div>
 
     <div class="form-group col-xs-8">
       <%= f.label :standard, "Standards" %>
-      <i class="fa fa-info-circle info-icon" aria-hidden="true" data-toggle="popover" title="Standards Information"
+      <i class="fa fa-info-circle" aria-hidden="true" data-toggle="popover" title="Standards Information"
       data-content="Select text in this field and click on the small dot. This will allow you to separate multiple standards using an unordered list."></i>
       <%= f.text_area :standard, class: "form-control editable form-long", rows: "9"%>
     </div>

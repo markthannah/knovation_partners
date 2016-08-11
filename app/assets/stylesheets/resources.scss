@@ -75,10 +75,6 @@
   height: 115px;
 }
 
-.info-icon {
-  color: rgb(40, 96, 144);
-}
-
 .support-text {
   font-size: 12px;
 }
@@ -112,6 +108,22 @@ font-size: 15px;
     height: 100px;
 }
 
-.descsize{
+.descsize {
   font-size: 15px;
+}
+
+.fa-info-circle:hover {
+    color: #2e6da4;
+}
+
+.fa-graduation-cap:hover {
+  color: #2e6da4;
+}
+
+.fa-user:hover {
+  color: #2e6da4;
+}
+
+.fa-send-o:hover{
+  color: #2e6da4;
 }
