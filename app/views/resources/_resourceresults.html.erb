@@ -12,32 +12,36 @@
         <% end %>
     </div> -->
 
-    <div class="col-xs-9 col-md-8 vcenter">
-        <h4 class="media-heading">
+    <div class="col-xs-9 col-md-9 vcenter">
+        <h3 class="media-heading">
         <%= link_to raw(resource.title), resource, target: "_blank" %>
-      </h4>
-      <%= raw resource.description.truncate(300) %>
+        </h3>
+        <div class="descsize">
+          <%= raw resource.description.truncate(300) %>
+        </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="media-right panel panel-default wellsmall" style="padding-left: 0px;">
         <div class="panel-body body-text">
-          <div class="media">
+          <!-- <div class="media">
             <div class="media-object pull-right">
-              <button class="btn btn-info btn-outline option-button" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus"></span></button>
-            </div>
-          <span class="fa fa-rocket icpad"></span>
+              <button class="btn btn-info btn-outline option-button tooltip-test" data-toggle="modal" data-toggle="tooltip"  data-target="#myModal" data-placement= "right" title="View Details"><span class="fa fa-plus"></span></button>
+            </div> -->
+          <span class="fa fa-graduation-cap tooltip-test" data-toggle="modal" data-toggle="tooltip"  data-placement= "left" title="Subject" style="padding-right: 5px;"></span>
           <%= resource.subject %></br>
 
-          <span class="fa fa-graduation-cap icpad"></span>
+          <span class="fa fa-user tooltip-test" data-toggle="modal" data-toggle="tooltip"  data-placement= "left" title="Academic Level" style="padding-right: 5px;"></span>
           <%= resource.grade %></br>
 
-          <span class="fa fa-language icpad"></span>
-          <%= resource.language %></br>
+          <span class="fa fa-send-o tooltip-test" data-toggle="modal" data-toggle="tooltip"  data-placement= "left" title="Learning Resource Type" style="padding-right: 5px;"></span>
+          <%= resource.lrt %></br>
         </div>
 
-        <!-- <div class="panel-footer" style= "text-align: center; padding: 5px;">
-        <button type="button" class="btn btn-outline btn-info btn-sm" data-toggle="modal" data-target="#myModal">View Details</button> -->
+        <div class="panel-footer" style= "text-align: center; padding: 5px;">
+        <button type="button" class="btn btn-outline btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+          <span class="fa fa-plus icpad"></span>View More Details
+        </button>
 
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
