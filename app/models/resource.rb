@@ -43,5 +43,6 @@ class Resource < ActiveRecord::Base
   validates :lrt, presence: true
   validates :keyword, presence: true
   validates :standard, presence: true
+  validates :lexile, presence: true
 
 end
