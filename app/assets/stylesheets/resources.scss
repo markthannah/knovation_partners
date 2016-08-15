@@ -134,7 +134,7 @@ font-size: 15px;
   color: gray;
 }
 
-.jumbocustom{
+.jumbocustomsc{
   margin-top: 20px;
   margin-bottom: 100px;
   background: image-url("2.png");
@@ -144,6 +144,42 @@ font-size: 15px;
   border-style: solid;;
   border-color: #e3e3e3;
   border-width: medium;;
+}
+
+.jumbocustomela{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  background: image-url("1.png");
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: solid;;
+  border-color: #e3e3e3;
+  border-width: medium;
+}
+
+.jumbocustommath{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  background: image-url("3.png");
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: solid;;
+  border-color: #e3e3e3;
+  border-width: medium;
+}
+
+.jumbocustomss{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  background: image-url("4.png");
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-style: solid;;
+  border-color: #e3e3e3;
+  border-width: medium;
 }
 
 .video_container {
