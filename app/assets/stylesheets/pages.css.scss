@@ -1,0 +1,76 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.support {
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.support h2{
+  margin-top: 10px;
+}
+
+.support .pull-left {
+  margin-right: 25px;
+}
+
+.support i{
+  font-size: 48px;
+  height: 110px;
+  width: 110px;
+  margin: 3px;
+  border-radius: 100%;
+  line-height: 110px;
+  text-align:center;
+  background: #ffffff;
+  color: #46b8da;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  float: left;
+  margin-right: 25px;
+}
+
+.support i:hover {
+  background: #46b8da;
+  color: #fff;
+  box-shadow: inset 0 0 0 5px #46b8da;
+  -webkit-box-shadow: inset 0 0 0 5px #46b8da;
+  border: 3px solid #46b8da;
+}
+
+
+.center {
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+.support h2 {
+  font-size: 20px;
+}
+
+.supportp{
+  font-size: 16px;
+  color: #808080;
+}
+
+.features{
+  padding-bottom: 30px;
+}
+
+.feature-heading {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.feature-heading hr {
+height: 3px;
+background-color: white;
+border: none;
+}
