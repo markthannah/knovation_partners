@@ -23,6 +23,7 @@ $(function() {
 });
 
 
+
 var navbarHeight = $('.navbar').height();
 
 $(window).scroll(function() {
