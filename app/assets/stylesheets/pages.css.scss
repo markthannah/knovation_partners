@@ -84,7 +84,7 @@ width: 800px;
 }
 
 .parallax-like {
-    background: url("mas2.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    background: image-url("mas2.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
@@ -101,7 +101,7 @@ width: 800px;
 }
 
 .parallax-like2 {
-    background: url("mas3.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    background: image-url("mas3.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
