@@ -18,7 +18,7 @@
 
         <div class="container">
          <div class="center">
-          <h2>Knovation brings trust, order, and context to a wealth of free online resources so you can easily find what you need, when you need it. </br> (This text needs to be jazzed up a bit.)</h2>
+          <h2>Knovation brings trust, order, and context to a wealth of free online resources so you can easily find what you need, when you need it. </br> (This text needs to be jazzed up a bit and the table is a work in progress.)</h2>
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
               </div>
@@ -26,18 +26,49 @@
           </div>
         </div>
 
-        <div class="container-fluid" style="background:#F7F7F7;">
-          <div class="well" style="margin:200px;">
-           <div class="center">
-            <h2>A TABLE WITH CONTENT COVERAGE GOES HERE</h2>
-            <h2>I'LL SPEND SOME TIME ON THIS NEXT</h2>
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="container-fluid">
+          <div class="container panel panel-default home-table">
+            <div class="panel-body">
+              <table class="table">
+              <thead>
+                <tr>
+                  <th class="home-table-rows"></th>
+                  <th class="home-table-rows">Elementary</th>
+                  <th class="home-table-rows">Middle</th>
+                  <th class="home-table-rows">High</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="table-subject">Language Arts</td>
+                <td class="home-table-center"> <%= link_to '123', ela_path(:elementary_ela => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '456', ela_path(:middle_ela => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '789', ela_path(:high_ela => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+              </tr>
+              <tr>
+                <td class="table-subject">Mathematics</td>
+                <td class="home-table-center"> <%= link_to '123', math_path(:elementary_math => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '456', math_path(:middle_math => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '789', math_path(:high_math => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+              </tr>
+              <tr>
+                <td class="table-subject">Science</td>
+                <td class="home-table-center"> <%= link_to '123', science_path(:elementary_science => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '456', science_path(:middle_science => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '789', science_path(:high_science => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+              </tr>
+              <tr>
+                <td class="table-subject">Social Studies</td>
+                <td class="home-table-center"> <%= link_to '123', socialstudies_path(:elementary_ss => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '456', socialstudies_path(:middle_ss => true), class: "btn btn-primary btn-lg table-button2" %> </td>
+                <td class="home-table-center"> <%= link_to '789', socialstudies_path(:high_ss => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </div>
+
 
         <div class="container-fluid">
         <div class="container feature-container">
