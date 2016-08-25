@@ -73,18 +73,35 @@ $font-family-sans-serif: 'Signika', 'Helvetica Neue', Helvetica, Arial, sans-ser
 }
 
 .feature-heading hr {
-height: 3px;
-background-color: #f2f2f2;
-border: 5px;
-margin-top: 40px;
-margin-bottom: 60px;
-width: 800px;
+  height: 3px;
+  background-color: #f2f2f2;
+  border: 5px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  width: 800px;
 }
 
 .feature-container {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.parallax-like0 {
+    background: image-url("mas4.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.parallax-like0 .overlay {
+    min-height: 350px;
+    background: rgba(35, 133, 161,0);
+    font-size: 40px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 
 .parallax-like {
     background: image-url("mas2.jpeg") no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
@@ -172,14 +189,23 @@ hr.mainline {
 
 .home-table {
   max-width: 900px;
+  border-top-width: 0px;
+
 }
 
 .home-table-rows {
   width: 25%;
   text-align: center;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font: gray!important;
   font-weight: bold;
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
+}
+
+th {
+    background-color: #776F67;
+    color: white;
 }
 
 .home-table-center {
@@ -189,8 +215,10 @@ hr.mainline {
 
 .table-subject {
   font-size: 18px;
-  color: gray;
   font-weight: bold;
+  background-color: #776F67;
+  color: white;
+  border: 0px;
 }
 
 .clickable {
@@ -200,32 +228,32 @@ hr.mainline {
 .table-button1, .table-button1:link, .table-button1:visited {
   border-radius: 0;
   background-color: transparent;
-  color: #e54b21;
-  border: 2px solid #e54b21;
+  color: #D2681B;
+  border: 2px solid #D2681B;
   margin: -1px;
   width:100%;
 }
 
 .table-button1:hover, .table-button1:active {
-  background-color: #e54b21;
+  background-color: #D2681B;
   color: #fff;
-  border: 2px solid #e54b21;
+  border: 2px solid #D2681B;
 }
 
 .table-button2, .table-button2:link, .table-button2:visited {
   border-radius: 0;
   background-color: transparent;
-  color: #e54b21;
-  border: 2px solid #e54b21;
+  color: #D2681B;
+  border: 2px solid #D2681B;
   margin: -1px;
   width:100%;
   border-right: 2px;
 }
 
 .table-button2:hover, .table-button2:active {
-  background-color: #e54b21;
+  background-color: #D2681B;
   color: #fff;
-  border: 2px solid #e54b21;
+  border: 2px solid #D2681B;
 }
 
 .table td {
@@ -352,7 +380,7 @@ hr.mainline {
   -o-transition: 500ms;
   transition: 500ms;
   margin-top: 40px;
-  
+
 }
 
 .downarrow:hover {
