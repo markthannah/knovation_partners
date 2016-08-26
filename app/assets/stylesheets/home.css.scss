@@ -398,3 +398,21 @@ th {
   color: #ffa500;
   text-decoration: none;
 }
+
+
+@media (max-width: 991px) and (min-width: 500px) {
+  .table-subject {
+    font-size: 14px;
+  }
+
+  .home-table-rows {
+    font-size: 14px;
+  }
+
+  .bottomitem{
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%
+  }
+
+}
