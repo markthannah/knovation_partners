@@ -412,7 +412,31 @@ th {
   .bottomitem{
     margin-top: 50px;
     margin-left: 25%;
-    margin-right: 25%
   }
 
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .supportp{
+    font-size: 14px;
+  }
+
+  .feature-links {
+    font-size: 18px;
+  }
+
+  .support {
+    font-size: 32px;
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    margin-right: 3%
+  }
+
+}
+
+@media (max-width: 770) and (min-width: 50px) {
+  .home-table-rows {
+    font-size: 10px;
+  }
 }
