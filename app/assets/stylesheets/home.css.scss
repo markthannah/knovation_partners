@@ -197,7 +197,7 @@ hr.mainline {
 }
 
 .home-table-rows {
-  width: 25%;
+  width: 20%;
   text-align: center;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -205,6 +205,18 @@ hr.mainline {
   border-top-width: 0px !important;
   border-bottom-width: 0px !important;
   padding: 15px !important;
+}
+
+.home-table-rows2 {
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
+  width: 6%
+}
+
+.home-table-rows3 {
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
+  width: 1%
 }
 
 th {
@@ -218,13 +230,16 @@ th {
 }
 
 .table-subject {
-  font-size: 18px;
-  font-weight: bold;
   background-color: #776F67;
   color: white;
   border: 0px;
   margin: 15px;
   padding-left: 25px !important;
+}
+
+.table-subject1 {
+  background-color: #776F67;
+  width: 5px !important;
 }
 
 .clickable {
@@ -259,6 +274,23 @@ th {
 .table-button2:hover, .table-button2:active {
   background-color: #D2681B;
   color: #fff;
+  border: 2px solid #D2681B;
+}
+
+
+.table-button3, .table-button3:link, .table-button3:visited {
+  border-radius: 0;
+  background-color: #D2681B;
+  color: white;
+  border: 2px solid #D2681B;
+  margin: -1px;
+  width:100%;
+
+}
+
+.table-button3:hover, .table-button3:active {
+  background-color: white;
+  color: #D2681B;
   border: 2px solid #D2681B;
 }
 

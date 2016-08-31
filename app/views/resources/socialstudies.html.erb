@@ -1,11 +1,11 @@
 <div class="form_top container">
   <p id="notice"><%= notice %></p>
 
-  <div class="jumbotron jumbocustomss">
+  <div class="jumbotron jumbocustommath">
     <div class = "row">
 
       <div class = "col-md-7 col-lg-4">
-        <div class="embed-responsive embed-responsive-16by9 video_container" style="margin-top: 40px;">
+        <div class="embed-responsive embed-responsive-16by9 video_container">
           <video  width="980" height="620" controls poster= "http://ren-network.com/wp-content/uploads/2014/07/Knovation.png">
             <source src= "https://s3-us-west-2.amazonaws.com/nettrekker-videos/How+Do+I+Effectively+Search+for+Resources_+%5BTeacher%5D-HD.mp4" type='video/mp4'>
               <p>To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
@@ -13,11 +13,10 @@
         </div>
       </div>
 
-        <div class= "col-md-5 col-lg-8" style="padding-left:35px; padding-bottom:30px;">
-          <h1 style="color:#454545; font-size:70px;"><b style="color:white;">Social Studies</b> Resources</h1>
-          <hr>
-          <div class="subtext" style="color:white;">Curated by Knovation's Curriculum Specialists</div>
-        </div>
+      <div class= "col-md-5 col-lg-8" style="padding-left:25px;">
+        <h1 style="color:#454545; font-size:52px;"><b style="color:#D2681B;">Social Studies</b></br> Resources</h1>
+        <div class="subtext">Curated by Knovation's Curriculum Specialists</div>
+      </div>
 
       </div>
     </div>
@@ -31,6 +30,6 @@
         <%= link_to 'High', socialstudies_path(:high_ss => true), class: "btn btn-info" %>
       </div>
   </div>
-
+</br>
 <%= render 'resources/resourceresults' %>
 </div>
