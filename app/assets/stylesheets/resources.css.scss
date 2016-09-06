@@ -188,3 +188,26 @@ font-size: 15px;
   border-color: #e3e3e3;
   background-color: white;
 }
+
+h1.results-lead {
+  color:#454545;
+  font-size:52px;
+}
+
+b.subject-lead {
+  color:#D2681B;
+}
+
+@media (max-width: 991px) and (min-width: 30px) {
+  h1.results-lead {
+    color:white;
+  }
+
+  b.subject-lead {
+    color:white;
+  }
+
+  .subtext {
+    color:white;
+  }
+  }
