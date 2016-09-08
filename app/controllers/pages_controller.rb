@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def faqs
+  end
+
+  def maintenance
+  end
 end

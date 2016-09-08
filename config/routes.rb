@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   get "about" => "pages#about"
+  get "faqs" => "pages#faqs"
+  get "maintenance" => "pages#maintenance"
   get "ela" => "resources#ela"
   get "math" => "resources#math"
   get "science" => "resources#science"
