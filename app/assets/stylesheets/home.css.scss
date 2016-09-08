@@ -250,17 +250,13 @@ th {
 .table-button1, .table-button1:link, .table-button1:visited {
   border-radius: 0;
   background-color: transparent;
-  color: #D2681B;
+  color: #D2681B ;
   border: 2px solid #D2681B;
   margin: -1px;
   width:100%;
+  opacity: 100;
 }
 
-.table-button1:hover, .table-button1:active {
-  background-color: #D2681B;
-  color: #fff;
-  border: 2px solid #D2681B;
-}
 
 .table-button2, .table-button2:link, .table-button2:visited {
   border-radius: 0;
@@ -270,6 +266,7 @@ th {
   margin: -1px;
   width:100%;
   border-right: 2px;
+  opacity: 100;
 }
 
 .table-button2:hover, .table-button2:active {
@@ -278,6 +275,9 @@ th {
   border: 2px solid #D2681B;
 }
 
+.launch-icon{
+  color: #D2681B;
+}
 
 .table-button3, .table-button3:link, .table-button3:visited {
   border-radius: 0;

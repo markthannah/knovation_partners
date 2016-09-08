@@ -42,36 +42,54 @@
                 </tr>
               </thead>
               <tbody>
+
               <tr>
                 <td class="table-subject1"></td>
-                <td class="home-table-center"> <%= link_to 'LANGUAGE ARTS', ela_path, class: "btn btn-primary btn-lg table-button3" %> </td>
-                <td class="home-table-center"> <%= link_to '123', ela_path(:elementary_ela => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '456', ela_path(:middle_ela => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '789', ela_path(:high_ela => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+                <td class="home-table-center">
+                  <%= link_to ela_path, class: "btn btn-primary btn-lg table-button3" do %>
+                            LANGUAGE ARTS
+                      <span class="fa fa-external-link launch-icon" aria-hidden="true"></span>
+                      <%end%>
+                </td>                <td class="home-table-center"> <%= link_to '18,318', ela_path(:elementary_ela => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '21,128', ela_path(:middle_ela => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '24,612', ela_path(:high_ela => true), class: "btn btn-primary btn-lg table-button1 disabled" %> </td>
                 <td class="table-subject"></td>
               </tr>
               <tr>
                 <td class="table-subject1"></td>
-                <td class="home-table-center"> <%= link_to 'MATHEMATICS', math_path, class: "btn btn-primary btn-lg table-button3" %> </td>
-                <td class="home-table-center"> <%= link_to '123', math_path(:elementary_math => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '456', math_path(:middle_math => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '789', math_path(:high_math => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+                <td class="home-table-center">
+                  <%= link_to math_path, class: "btn btn-primary btn-lg table-button3" do %>
+                            MATHEMATICS
+                      <span class="fa fa-external-link launch-icon" aria-hidden="true"></span>
+                      <%end%>
+                </td>
+                <td class="home-table-center"> <%= link_to '17,089', math_path(:elementary_math => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '22,171', math_path(:middle_math => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '22,773', math_path(:high_math => true), class: "btn btn-primary btn-lg table-button1 disabled" %> </td>
                 <td class="table-subject"></td>
               </tr>
               <tr>
                 <td class="table-subject1"></td>
-                <td class="home-table-center"> <%= link_to 'SCIENCE', science_path, class: "btn btn-primary btn-lg table-button3" %> </td>
-                <td class="home-table-center"> <%= link_to '123', science_path(:elementary_science => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '456', science_path(:middle_science => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '789', science_path(:high_science => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+                <td class="home-table-center">
+                  <%= link_to science_path, class: "btn btn-primary btn-lg table-button3" do %>
+                            SCIENCE
+                      <span class="fa fa-external-link launch-icon" aria-hidden="true"></span>
+                      <%end%>
+                </td>                <td class="home-table-center"> <%= link_to '20,517', science_path(:elementary_science => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '41,343', science_path(:middle_science => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '46,458', science_path(:high_science => true), class: "btn btn-primary btn-lg table-button1 disabled" %> </td>
                 <td class="table-subject"></td>
               </tr>
               <tr>
                 <td class="table-subject1"></td>
-                <td class="home-table-center"> <%= link_to 'SOCIAL STUDIES', socialstudies_path, class: "btn btn-primary btn-lg table-button3" %> </td>
-                <td class="home-table-center"> <%= link_to '123', socialstudies_path(:elementary_ss => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '456', socialstudies_path(:middle_ss => true), class: "btn btn-primary btn-lg table-button2" %> </td>
-                <td class="home-table-center"> <%= link_to '789', socialstudies_path(:high_ss => true), class: "btn btn-primary btn-lg table-button1" %> </td>
+                <td class="home-table-center">
+                  <%= link_to socialstudies_path, class: "btn btn-primary btn-lg table-button3" do %>
+                            SOCIAL STUDIES
+                      <span class="fa fa-external-link launch-icon" aria-hidden="true"></span>
+                      <%end%>
+                </td>                <td class="home-table-center"> <%= link_to '12,888', socialstudies_path(:elementary_ss => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '36,178', socialstudies_path(:middle_ss => true), class: "btn btn-primary btn-lg table-button2 disabled" %> </td>
+                <td class="home-table-center"> <%= link_to '42,779', socialstudies_path(:high_ss => true), class: "btn btn-primary btn-lg table-button1 disabled" %> </td>
                 <td class="table-subject"></td>
               </tr>
             </tbody>
