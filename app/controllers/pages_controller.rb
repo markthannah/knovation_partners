@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def maintenance
   end
+
+  def contextualization
+  end
+
+  def curation
+  end
 end

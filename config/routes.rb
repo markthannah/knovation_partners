@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get "about" => "pages#about"
   get "faqs" => "pages#faqs"
+  get "curation" => "pages#curation"
+  get "contextualization" => "pages#contextualization"
   get "maintenance" => "pages#maintenance"
   get "ela" => "resources#ela"
   get "math" => "resources#math"
