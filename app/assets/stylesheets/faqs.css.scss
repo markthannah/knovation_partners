@@ -1,7 +1,16 @@
-.faqs-container {
-  padding-top: 100px;
-  padding-bottom: 120px;
+.contact {
+  color: #D2681B;
+  font-size: 25px;
+}
 
+.contact:hover{
+  color: #46b8da;
+  text-decoration: none;
+}
+
+.faqs-container {
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .faq-cat-content {
@@ -13,6 +22,7 @@
     background-color: #ffffff;
     border: 1px solid #dddddd;
     color: #777777;
+    font-size: 17px;
 }
 
 .nav-tabs li a:focus,
@@ -38,4 +48,9 @@
 .panel-faq .panel-heading .panel-title span {
     font-size: 13px;
     font-weight: normal;
+}
+
+.page-header {
+  text-align: center;
+  padding-bottom: 40px;
 }
