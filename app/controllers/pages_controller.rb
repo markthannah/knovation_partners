@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def maintenance
   end
 
+  def integrations
+  end
+
   def contextualization
   end
 
