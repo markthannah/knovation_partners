@@ -160,7 +160,7 @@ font-size: 15px;
 
 .jumbocustommath{
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   background: image-url("math2.png");
   background-position: 0% 25%;
   background-size: cover;
@@ -211,3 +211,11 @@ b.subject-lead {
     color:white;
   }
   }
+
+.subjecttext {
+  font-weight: 200;
+  font-size: 22px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 50px;
+}
