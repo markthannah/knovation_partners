@@ -15,6 +15,11 @@
      <div class="navbar-collapse collapse">
 
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li> <%=link_to "Dashboard", dashboard_path%> </li>
+          <li> <%=link_to "Spotlights", spotlights_path%> </li>
+          <li class="divider-vertical"> </li>
+        <% end %>
         <li> <%=link_to "Language Arts", ela_path%> </li>
         <li> <%=link_to "Math", math_path%> </li>
         <li> <%=link_to "Science", science_path%> </li>

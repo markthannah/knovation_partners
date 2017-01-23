@@ -1,0 +1,117 @@
+<div class="container">
+  <div style="margin-bottom: 70px;">
+    <%= form_for @spotlight, html: { multipart: true } do |f| %>
+      <% if @spotlight.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@spotlight.errors.count, "error") %> prohibited this spotlight from being saved:</h2>
+
+          <ul>
+          <% @spotlight.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-xs-6">
+          <%= f.label :image %>
+          <%= f.file_field :image, class: "form-control" %>
+          <p>Image URL: <%= @spotlight.image %> </p></br>
+        </div>
+      <div class="form-group col-xs-6">
+        <%= f.label :icon %><br>
+        <%= f.text_field :icon, class: "form-control"%>
+      </div>
+    </div>
+
+      <div class="form-group">
+        <%= f.label :description_title %><br>
+        <%= f.text_field :description_title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description,  rows: "5", class: "form-control form-long" %>
+      </div>
+
+      <% if false %>
+        <!-- <div class="form-group">
+          <%= f.label :subject %>
+          <%= f.select(:subject, options_for_select([['Math'], ['Science'], ['Social Studies'], ['Language Arts']], {:selected => @spotlight.subject})) %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :grade %>
+          <%= f.select(:grade, options_for_select([['Preschool'], ['Kindergarten'], ['First Grade'], ['Second Grade'], ['Third Grade'], ['Fourth Grade'], ['Fifth Grade']], {:selected => @spotlight.grade})) %>
+        </div> -->
+
+      <!-- <div class="form-group">
+      <p>
+        <strong>Topic Image:</strong>
+      </p>
+        <%= f.file_field :image %>
+      </div>
+
+      <p>Image URL: <%= @spotlight.image %> </p></br>
+
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <h4>Featured Resources</h4>
+          <div class="resource-container">
+              <table class="table table-hover table-vcenter">
+                <tbody>
+                  <% @featuredresources.each do |resource| %>
+                    <tr>
+                      <td><%= check_box_tag :resource_ids, resource.id, @spotlight.resources.include?(resource), :name => 'topic[resource_ids][]'-%></td>
+                      <td style="width:45%"><%= link_to image_tag(resource.thumbnail.url(:thumb)), resource.url,:target => "_blank" %></td>
+                      <td><%= label_tag :resource_titles, resource.title -%></td>
+                      <td><%= link_to 'Edit', edit_resource_path(resource), class: "btn btn-primary" %></td>
+                    </tr>
+                  <% end -%>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <h4>Supporting Resources</h4>
+            <div class="resource-container">
+                <table class="table table-hover table-vcenter">
+                  <tbody>
+                    <% @supportingresources.each do |resource| %>
+                      <tr>
+                        <td><%= check_box_tag :resource_ids, resource.id, @spotlight.resources.include?(resource), :name => 'topic[resource_ids][]'-%></td>
+                        <td style="width:45%"><%= link_to image_tag(resource.thumbnail.url(:thumb)), resource.url,:target => "_blank" %></td>
+                        <td><%= label_tag :resource_titles, resource.title -%></td>
+                        <td><%= link_to 'Edit', edit_resource_path(resource), class: "btn btn-primary" %></td>
+                      </tr>
+                    <% end -%>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div> -->
+        <!-- </br>
+      </br>
+
+      <div class="row" style=" margin-bottom: 40px; ">
+        <label class="col-md-5 control-label" for="singlebutton"></label>
+        <div class="col-md-1 center-block">
+                <%= link_to 'New Resource', new_resource_path, class: "btn btn-primary" %>
+        </div>
+      </div> -->
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to 'Cancel', @spotlight , class: "btn btn-danger"%>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container faqs-container">
+  <div class="page-header" style="margin-bottom: 70px;">
+    <div id="spotlights" class="transitions-enabled">
+      <div class="row">
+        <% @spotlights.each do |spotlight| %>
+          <div class="col-sm-6 col-md-4">
+            <div class="box panel panel-default">
+              <%= image_tag spotlight.image.url(:medium) %>
+              <%= spotlight.publisher %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

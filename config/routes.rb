@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spotlights
   resources :resources
   devise_for :users
   root 'pages#home'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get "science" => "resources#science"
   get "socialstudies" => "resources#socialstudies"
   get "finearts" => "resources#finearts"
+  get "dashboard" => "spotlights#dashboard"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

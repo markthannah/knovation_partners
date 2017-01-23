@@ -61,17 +61,14 @@
         <div class="form-group drop-down-group">
           <%= f.label :grade, "Academic Level" %>
           <%= f.select(:grade, options_for_select([['Elementary'], ['Middle'], ['High']], {:selected => @resource.grade}),:prompt => "Select One") %>
-
         </div>
         <div class="form-group drop-down-group" >
           <%= f.label :lrt, "LRT" %>
           <%= f.select(:lrt, options_for_select([['3-D Printing Plan'], ['Activity'], ['App'], ['Article'], ['Assessment'], ['Audio Content'], ['ebook'], ['Interactive Media'], ['Learning Game'], ['Learning Module'], ['Lesson Plan'], ['Primary Source Document'], ['Professional Learning Resource'], ['Reference Material'], ['Student-Created Material'], ['Test Preparation Matieral'], ['Video'], ['Virtual Course'], ['Visual Material'], ['Website'], ['Whiteboard Resource']], {:selected => @resource.lrt}),:prompt => "Select One") %>
-
         </div>
         <div class="form-group drop-down-group">
           <%= f.label :readability, "Readability" %>
           <%= f.select(:readability, options_for_select([['N/A'],['1'], ['2'], ['3'], ['4'], ['5']], {:selected => @resource.readability}),:prompt => "Select One") %>
-
         </div>
       </div>
     </div>
@@ -197,6 +194,14 @@
       <%= f.text_area :standard, class: "form-control editable form-long", rows: "9"%>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col-xs-12">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+  </div>
+
 
     <div class="form-group" style="padding-bottom:55px; padding-top:15px;">
       <%= f.submit class: "btn btn-primary" %>

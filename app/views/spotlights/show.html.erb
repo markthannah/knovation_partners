@@ -1,0 +1,94 @@
+<div class="show_container">
+  <p id="notice"><%= notice %></p>
+  <div class="container bg-primary1" style="width:100%">
+
+    <% if false %>
+      <!-- <div class="row">
+        <h1 class="page-header-lc"><%= @spotlight.title %>
+          <i class= "<%= @spotlight.icon %>" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i>
+            <small style="color: white;"><%= @spotlight.grade %> <%= %> <%= @spotlight.subject %></small>
+        </h1>
+      </div> -->
+    <% end %>
+
+      <div class="row">
+        <h1 class="page-header-lc"><%= @spotlight.publisher %>
+          <i class= "<%= @spotlight.icon %>" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i>
+            <small style="color: white;">Knovation's Editor's Choice - October 2016</small>
+        </h1>
+      </div>
+    </div>
+
+    <div class="container pad-contain">
+      <div class="well well-lg well-style">
+        <div class="row">
+
+        <div class="col-md-4 col-md-push-8 panel panel-default description">
+          <h3 style="color: #089de3"><%= @spotlight.description_title %></h3>
+          <p style="white-space: pre-wrap;"><%= @spotlight.description %></p>
+        </div>
+
+      <% if false %>
+        <!-- <% @spotlight.resources.resource_type("Featured").each do |featuredresource| %>
+          <div class="embed-responsive embed-responsive-16by9 col-md-8 col-md-pull-4 top-section top-section2 div_style_video">
+            <iframe class="embed-responsive-item" src="<%= featuredresource.url %>"> </iframe>
+          </div>
+
+          <div class="col-md-2 panel panel-default description-panel large-width">
+            <h4 class="video-description"><%= featuredresource.title %></h4>
+            <p> <%= featuredresource.description%> </p>
+          </div> -->
+        <% end %>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container bg-primary2" style="width:100%">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Our favorites from ReadWriteThink <i class="fa fa-rocket" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i></h2>
+
+                <hr class="light">
+                <p class="text-faded">Here are just a few resources from ReadWriteThink that we think you'll love.</p>
+            </div>
+        </div>
+    </div>
+
+  <% if false %>
+    <!-- <div class="row-fluid resource-row">
+      <% @spotlight.resources.resource_type("Supporting").each do |supportingresource| %>
+        <div class="col-sm-3 col-xs-6">
+          <div class="panel panel-default panel-bottom panel-border">
+            <div class="panel-body">
+              <div class="pdf-thumb-box">
+                <a target="_blank" href= "<%= supportingresource.url %>">
+                  <div class="pdf-thumb-box-overlay"><span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-2x"></i>
+                  </span>
+                  </div>
+                  <img class="img-responsive portfolio-item" <%=image_tag supportingresource.thumbnail.url(:medium)%>
+                </a>
+              </div>
+              <a target="_blank" href= "<%= supportingresource.url %>">
+                <h3><%= supportingresource.title %></br></h3>
+              </a>
+              <p><%= supportingresource.description%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div> -->
+  <% end %>
+
+    <div class="form-group">
+      <% if @spotlight.user == current_user %>
+        <%= link_to 'Edit', edit_topic_path(@spotlight), class: "btn btn-primary" %>
+      <% end %>
+
+      <%= link_to 'Back to Spotlights', topics_path, class: "btn btn-default" %>
+    </div>
+
+    <% end %>
+</div>

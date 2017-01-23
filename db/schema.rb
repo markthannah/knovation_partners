@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812020357) do
+ActiveRecord::Schema.define(version: 20170123025401) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "title"
@@ -26,13 +26,31 @@ ActiveRecord::Schema.define(version: 20160812020357) do
     t.string   "readability"
     t.text     "language"
     t.text     "standard"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.string   "lexile"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "resources", ["user_id"], name: "index_resources_on_user_id"
+
+  create_table "spotlights", force: :cascade do |t|
+    t.string   "description"
+    t.string   "title"
+    t.string   "publisher"
+    t.string   "icon"
+    t.string   "description_title"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
