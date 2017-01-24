@@ -8,9 +8,9 @@
       <table class="table table-vcenter">
         <thead class="cpindex">
           <tr>
-            <th style=width=5%></th>
             <th></th>
             <th>Publisher</th>
+            <th></th>
             <th>Title</th>
             <th>Description</th>
             <th colspan="3"></th>
@@ -25,7 +25,7 @@
                   <span class="fa fa-external-link"></span>
                   <%=spotlight.publisher%>
                 <% end %></td>
-                <td><%= image_tag spotlight.image.url(:small)%></td>
+                <td><%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %> </td>
                 <td><%= spotlight.title%></td>
                 <td><%= truncate(spotlight.description.html_safe, :length => 40, :separator => " " )%></td>
                 <td><%= link_to edit_spotlight_path(spotlight), class:"btn btn-primary", :method => :get do %>
