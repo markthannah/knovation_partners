@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li> <%=link_to "Dashboard", dashboard_path%> </li>
-          <li> <%=link_to "Spotlights", spotlights_path%> </li>
+          <li> <%=link_to "Spotlights", spotlights_path, 'data-turbolinks' => false %> </li>
           <li class="divider-vertical"> </li>
         <% end %>
         <li> <%=link_to "Language Arts", ela_path%> </li>

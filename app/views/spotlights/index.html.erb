@@ -3,10 +3,14 @@
     <div id="spotlights" class="transitions-enabled">
       <div class="row">
         <% @spotlights.each do |spotlight| %>
-          <div class="col-sm-6 col-md-4">
-            <div class="box panel panel-default">
-              <div><%= link_to image_tag(spotlight.image.url(:medium)), spotlight %></div>
-              <%= spotlight.publisher %>
+          <div class="col-sm-6 col-md-4 box">
+            <div class="panel panel-default spotlightpanel">
+              <div>
+                <%= link_to image_tag(spotlight.image.url(:medium)), spotlight %>
+              </div>
+              <div class="panel-body">
+                <%= spotlight.publisher %>
+              </div>
             </div>
           </div>
         <% end %>
