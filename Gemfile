@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
 gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '< 2.0'
 
 
 # Use ActiveModel has_secure_password
