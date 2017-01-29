@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123025401) do
+ActiveRecord::Schema.define(version: 20170128050427) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "title"
@@ -34,9 +34,19 @@ ActiveRecord::Schema.define(version: 20170123025401) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "type"
+    t.string   "spotlight"
+    t.string   "resource_type"
   end
 
   add_index "resources", ["user_id"], name: "index_resources_on_user_id"
+
+  create_table "spotlightizations", force: :cascade do |t|
+    t.integer  "spotlight_id"
+    t.integer  "resource_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "spotlights", force: :cascade do |t|
     t.string   "description"

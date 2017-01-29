@@ -21,17 +21,27 @@ class SpotlightsController < ApplicationController
 
   # GET /spotlights/new
   def new
-    @spotlight = Spotlight.new
+    @spotlight = current_user.spotlights.build
+    @resources = Resource.all
+    @supportingresources = Resource.where("resource_type = 'Supporting'", params[:resource_type]).order(:title)
+    @featuredresources = Resource.where("resource_type = 'Featured'", params[:resource_type]).order(:title)
+
   end
 
   # GET /spotlights/1/edit
   def edit
+    @resources = Resource.all
+    @supportingresources = Resource.where("resource_type = 'Supporting'", params[:resource_type]).order(:title)
+    @featuredresources = Resource.where("resource_type = 'Featured'", params[:resource_type]).order(:title)
   end
 
   # POST /spotlights
   # POST /spotlights.json
   def create
-    @spotlight = Spotlight.new(spotlight_params)
+    @spotlight = current_user.spotlights.build(spotlight_params)
+    @resources = Resource.all
+    @supportingresources = Resource.where("resource_type = 'Supporting'", params[:resource_type]).order(:title)
+    @featuredresources = Resource.where("resource_type = 'Featured'", params[:resource_type]).order(:title)
 
     respond_to do |format|
       if @spotlight.save
@@ -42,20 +52,17 @@ class SpotlightsController < ApplicationController
         format.json { render json: @spotlight.errors, status: :unprocessable_entity }
       end
     end
+    @spotlight.attributes = {'resource_ids' => []}.merge(params[:spotlight] || {})
   end
 
-  # PATCH/PUT /spotlights/1
-  # PATCH/PUT /spotlights/1.json
+
   def update
-    respond_to do |format|
-      if @spotlight.update(spotlight_params)
-        format.html { redirect_to @spotlight, notice: 'Spotlight was successfully updated.' }
-        format.json { render :show, status: :ok, location: @spotlight }
-      else
-        format.html { render :edit }
-        format.json { render json: @spotlight.errors, status: :unprocessable_entity }
-      end
+    if @spotlight.update(spotlight_params)
+      redirect_to @spotlight, notice: 'Spotlight was successfully updated.'
+    else
+      render :edit
     end
+    @spotlight.attributes = {'resource_ids' => []}.merge(params[:spotlight] || {})
   end
 
   # DELETE /spotlights/1

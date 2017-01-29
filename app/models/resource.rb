@@ -1,9 +1,13 @@
 class Resource < ActiveRecord::Base
   belongs_to :user
+  has_many :spotlightizations
+  has_many :spotlights, :through => :spotlightizations
+
+  scope :resource_type, -> (resource_type) {where resource_type: resource_type}
 
   has_attached_file :image, :styles => { :small => "200x200", :medium => "400x400>", :thumb => "100x100>" }
   do_not_validate_attachment_file_type :image
-  
+
   scope :subject, -> (subject) {where subject: subject}
 
   scope :elementary_math, -> {where(grade: 'Elementary').where(subject: 'Math')}

@@ -18,6 +18,18 @@
         <h3 style="color: #089de3"><%= @spotlight.description_title %></h3>
         <p style="white-space: pre-wrap;"><%= @spotlight.description %></p>
       </div>
+
+      <% @spotlight.resources.resource_type("Featured").each do |featuredresource| %>
+        <div class="embed-responsive embed-responsive-16by9 col-md-8 col-md-pull-4 top-section top-section2 div_style_video">
+          <iframe class="embed-responsive-item" src="<%= featuredresource.url %>"> </iframe>
+        </div>
+
+        <!-- <div class="col-md-2 panel panel-default description-panel large-width">
+          <h4 class="video-description"><%= featuredresource.title %></h4>
+          <p> <%= featuredresource.description%> </p>
+        </div> -->
+      <% end %>
+
       </div>
     </div>
   </div>
@@ -33,12 +45,37 @@
     </div>
   </div>
 
+  <div class="row-fluid resource-row">
+  <% @spotlight.resources.resource_type("Supporting").each do |supportingresource| %>
+    <div class="col-md-3 col-xs-6">
+      <div class="panel panel-default panel-bottom panel-border">
+        <div class="panel-body">
+          <div class="pdf-thumb-box">
+            <a target="_blank" href= "<%= supportingresource.url %>">
+              <div class="pdf-thumb-box-overlay"><span class="fa-stack fa-lg">
+                <i class="fa fa-external-link fa-2x"></i>
+              </span>
+              </div>
+              <img class="img-responsive portfolio-item" <%=image_tag supportingresource.image.url(:medium)%>
+            </a>
+          </div>
+          <a target="_blank" href= "<%= supportingresource.url %>">
+            <h3><%= raw(supportingresource.title) %></h3>
+          </a>
+          <p><%= raw(supportingresource.description) %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
   <div class="form-group">
     <% if user_signed_in? %>
       <%= link_to 'Edit', edit_spotlight_path(@spotlight), class: "btn btn-primary" %>
     <% end %>
 
-    <%= link_to 'Back to Spotlights', spotlights_path, class: "btn btn-default" %>
+    <%= link_to 'Back to Spotlights', spotlights_path, class: "btn btn-default",  'data-turbolinks' => false %>
   </div>
 
 </div>
