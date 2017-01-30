@@ -21,7 +21,7 @@ class SpotlightsController < ApplicationController
 
   # GET /spotlights/new
   def new
-    @spotlight = current_user.spotlights.build
+    @spotlight = Spotlight.new
     @resources = Resource.all
     @supportingresources = Resource.where("resource_type = 'Supporting'", params[:resource_type]).order(:title)
     @featuredresources = Resource.where("resource_type = 'Featured'", params[:resource_type]).order(:title)
@@ -38,7 +38,7 @@ class SpotlightsController < ApplicationController
   # POST /spotlights
   # POST /spotlights.json
   def create
-    @spotlight = current_user.spotlights.build(spotlight_params)
+    @spotlight = Spotlight.new(spotlight_params)
     @resources = Resource.all
     @supportingresources = Resource.where("resource_type = 'Supporting'", params[:resource_type]).order(:title)
     @featuredresources = Resource.where("resource_type = 'Featured'", params[:resource_type]).order(:title)
