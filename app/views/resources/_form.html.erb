@@ -56,7 +56,7 @@
       <div class="form-inline">
         <div class="form-group drop-down-group">
           <%= f.label :subject %>
-          <%= f.select(:subject, options_for_select([['Math'], ['Science'], ['Social Studies'], ['Language Arts'], ['Fine Arts']], {:selected => @resource.subject}),:prompt => "Select One") %>
+          <%= f.select(:subject, options_for_select([['None'], ['Math'], ['Science'], ['Social Studies'], ['Language Arts'], ['Fine Arts']], {:selected => @resource.subject}),:prompt => "Select One") %>
         </div>
         <div class="form-group drop-down-group">
           <%= f.label :grade, "Academic Level" %>
