@@ -2,7 +2,8 @@
   <div style="margin-bottom: 70px;">
     </br>
     <h2>Spotlight Dashboard</h2>
-    <br>
+    <%= link_to 'New Spotlight', new_spotlight_path, class: "btn btn-primary pull-right" %>
+    <br>  <br>   <br>
     <div>
       <!-- Table -->
       <table class="table table-vcenter">
@@ -38,9 +39,6 @@
             <% end %>
         </tbody>
       </table>
-
-    <br>
-        <%= link_to 'New Spotlight', new_spotlight_path, class: "btn btn-primary" %>
     </div>
 
       </br>
@@ -48,7 +46,9 @@
       </br>
 
   <h2>Resource Dashboard</h2>
-  <br>
+      <%= link_to 'New Resource', new_resource_path, class: "btn btn-primary pull-right" %>
+      <br>  <br>   <br>
+
     <!-- Table -->
     <table class="table table-vcenter">
       <col>

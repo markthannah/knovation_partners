@@ -1,5 +1,5 @@
 <div class="container">
-  <div style="margin-bottom: 70px;">
+  <div>
     <%= form_for @spotlight, html: { multipart: true } do |f| %>
       <% if @spotlight.errors.any? %>
         <div id="error_explanation">
@@ -13,27 +13,51 @@
         </div>
       <% end %>
 
+      <div class="row">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5">
+          <div class=  "well-spotlight">
+            <div class="col-md-3">
+              <b>Select One:</b>
+            </div>
+            <div class="col-md-5">
+              <div>
+                <%= f.label :month %>
+                <%= f.select(:month, options_for_select([['January'], ['February'], ['March'], ['April'], ['May'], ['June'], ['July'], ['August'], ['September'], ['October'], ['November'], ['December']], {:selected => @spotlight.month}),:prompt => "Select") %>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div>
+                <%= f.label :year %>
+                <%= f.select(:year, options_for_select([['2017'], ['2018']], {:selected => @spotlight.year}),:prompt => "Select") %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="form-group">
         <%= f.label :publisher %><br>
         <%= f.text_field :publisher, class: "form-control" %>
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <%= f.label :title %><br>
         <%= f.text_field :title, class: "form-control" %>
-      </div>
+      </div> -->
 
       <div class="row">
-        <div class="form-group col-xs-6">
+        <div class="form-group col-xs-6" style="margin-bottom: 0px;">
           <%= f.label :image %>
           <%= f.file_field :image, class: "form-control" %>
-          <p>Image URL: <%= @spotlight.image %> </p></br>
+          <p>Current Image URL: <%= @spotlight.image %> </p></br>
         </div>
-      <div class="form-group col-xs-6">
-        <%= f.label :icon %><br>
-        <%= f.text_field :icon, class: "form-control"%>
+        <div class="form-group col-xs-6">
+          <%= f.label :icon %><br>
+          <%= f.text_field :icon, class: "form-control"%>
+        </div>
       </div>
-    </div>
 
       <div class="form-group">
         <%= f.label :description_title %><br>
@@ -44,18 +68,6 @@
         <%= f.label :description %>
         <%= f.text_area :description,  rows: "5", class: "form-control form-long" %>
       </div>
-
-      <% if false %>
-        <!-- <div class="form-group">
-          <%= f.label :subject %>
-          <%= f.select(:subject, options_for_select([['Math'], ['Science'], ['Social Studies'], ['Language Arts']], {:selected => @spotlight.subject})) %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :grade %>
-          <%= f.select(:grade, options_for_select([['Preschool'], ['Kindergarten'], ['First Grade'], ['Second Grade'], ['Third Grade'], ['Fourth Grade'], ['Fifth Grade']], {:selected => @spotlight.grade})) %>
-        </div> -->
-        <% end %>
 
       <div class="row">
         <div class="col-md-5 col-md-offset-1">
