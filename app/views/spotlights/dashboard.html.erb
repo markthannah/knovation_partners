@@ -52,13 +52,18 @@
     <!-- Table -->
     <table class="table table-vcenter">
       <col>
-      <col width="30%">
+      <col width="20%">
+      <col>
+      <col width="10%">
+      <col width="20%">
       <col width="20%">
       <thead class="cpindex">
         <tr>
           <th></th>
           <th>Resource Title</th>
           <th>Resource URL</th>
+          <th>Publisher</th>
+          <th>Spotlight Type</th>
           <th>Subject</th>
           <th></th>
         </tr>
@@ -70,6 +75,8 @@
               <td></td>
               <td><%= raw resource.title %></td>
               <td><%= link_to resource.url, resource.url, :target => "_blank" %></td>
+              <td><%= resource.author_publisher %></td>
+              <td><%= resource.resource_type %></td>
               <td><%= resource.subject %></td>
               <td><%= link_to edit_resource_path(resource), class:"btn btn-primary", :method => :get do %>
                 <span class="fa fa-edit"></span> Edit

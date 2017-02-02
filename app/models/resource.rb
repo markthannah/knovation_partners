@@ -2,6 +2,7 @@ class Resource < ActiveRecord::Base
   belongs_to :user
   has_many :spotlightizations
   has_many :spotlights, :through => :spotlightizations
+  accepts_nested_attributes_for :spotlights
 
   scope :resource_type, -> (resource_type) {where resource_type: resource_type}
 

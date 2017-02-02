@@ -160,7 +160,7 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:title, :description, :url, :lrt, :resource_type, :subject, :author_publisher, :grade, :standard, :readability, :lexile, :keyword, :image, language: [], role: [])
+      params.require(:resource).permit(:title, :description, :url, :lrt, :resource_type, :subject, :author_publisher, :grade, :standard, :readability, :lexile, :keyword, :image, language: [], role: [], spotlight_attributes: [:month, :year])
     end
 end
 ()

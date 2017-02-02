@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130182324) do
+ActiveRecord::Schema.define(version: 20170202022054) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "title"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20170130182324) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "type"
-    t.string   "spotlight"
     t.string   "resource_type"
   end
 
