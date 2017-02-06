@@ -2,7 +2,15 @@
 .navbar-inverse {
   background: rgba(62, 195, 246, 0);
   border-bottom: none;
-}
+  .dropdown:hover .dropdown-menu {
+    display: block;}
+    .navbar-nav {
+        .open {
+            > a, > a:hover, > a:focus {
+                background-color: #E8E8E8;
+                color: #282828; }}}}
+
+
 
 .navbar {
   height:100px !important;

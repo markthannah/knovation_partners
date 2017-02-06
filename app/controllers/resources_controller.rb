@@ -8,6 +8,10 @@ class ResourcesController < ApplicationController
     @resources = Resource.all
     end
 
+  def resource_dashboard
+    @resources = Resource.all
+  end
+
   # GET /resources/1
   # GET /resources/1.json
   def show

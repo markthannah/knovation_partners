@@ -8,10 +8,8 @@ class SpotlightsController < ApplicationController
     @spotlights = Spotlight.all
   end
 
-
-  def dashboard
+  def spotlight_dashboard
     @spotlights = Spotlight.all
-    @resources = Resource.all
   end
 
   # GET /spotlights/1

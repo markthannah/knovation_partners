@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get "science" => "resources#science"
   get "socialstudies" => "resources#socialstudies"
   get "finearts" => "resources#finearts"
-  get "dashboard" => "spotlights#dashboard"
+  get "resource_dashboard" => "resources#resource_dashboard"
+  get "spotlight_dashboard" => "spotlights#spotlight_dashboard"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

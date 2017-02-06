@@ -208,6 +208,29 @@ hr.mainline {
   padding: 15px !important;
 }
 
+.dashboard-table-rows {
+  width: 20%;
+  text-align: center;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px !important;
+}
+
+.edit-collumn{
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
+  padding: 10px !important;
+}
+
+.table tbody>tr>td.vert-align{
+    vertical-align: middle;
+    text-align: center;
+}
+
 .home-table-rows2 {
   border-top-width: 0px !important;
   border-bottom-width: 0px !important;
@@ -220,7 +243,7 @@ hr.mainline {
   width: 1%
 }
 
-th {
+.home-table-top {
     background-color: #776F67;
     color: white;
 }

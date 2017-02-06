@@ -1,0 +1,39 @@
+<div class="container faqs-container">
+  <div style="margin-bottom: 70px;">
+    <h2>Resource Dashboard</h2>
+        <%= link_to 'New Resource', new_resource_path, class: "btn btn-primary pull-right" %>
+        <br>  <br>   <br>
+        <div>
+      <!-- Table -->
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="dashboard-table-rows">Title</th>
+            <th class="dashboard-table-rows">URL</th>
+            <th class="dashboard-table-rows">Subject</th>
+            <th class="dashboard-table-rows">Spotlight</th>
+            <th class="edit-collumn"></th>
+          </tr>
+        </thead>
+
+          <tbody>
+            <% @resources.each do |resource| %>
+                <tr>
+                  <td><%= raw resource.title %></td>
+                  <td><%= link_to resource.url, resource.url, :target => "_blank" %></td>
+                  <td><%= resource.subject %></td>
+                  <% if resource.resource_type == 'Featured' or resource.resource_type == 'Supporting' %>
+                    <td><%= resource.author_publisher %>: <%= resource.resource_type %>
+                      <% else %>
+                      <td></td>
+                      <% end %></td>
+                  <td class="vert-align"><%= link_to edit_resource_path(resource), class:"btn btn-primary", :method => :get do %>
+                    <span class="fa fa-edit"></span> Edit
+                  <% end %></td>
+                </tr>
+              <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
