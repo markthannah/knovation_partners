@@ -9,7 +9,7 @@
         <thead>
           <tr>
             <th class="dashboard-table-rows">Publisher</th>
-            <th class="dashboard-table-rows"></th>
+            <th class="dashboard-table-rows">Month</th>
             <th class="dashboard-table-rows">Title</th>
             <th class="dashboard-table-rows">Description</th>
             <th class="edit-collumn"></th>
@@ -19,11 +19,12 @@
         <tbody>
           <% @spotlights.each do |spotlight| %>
               <tr>
-                <td><%= link_to spotlight_path(spotlight) do %>
-                  <span class="fa fa-external-link"></span>
+                <td>
+                <%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %>
+                <%= link_to spotlight_path(spotlight) do %>
                   <%=spotlight.publisher%>
                 <% end %></td>
-                <td><%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %> </td>
+                <td><%= spotlight.month %> <%= spotlight.year %></td>
                 <td><%= spotlight.title%></td>
                 <td><%= truncate(spotlight.description.html_safe, :length => 40, :separator => " " )%></td>
                 <td class="vert-align"><%= link_to edit_spotlight_path(spotlight), class:"btn btn-primary", :method => :get do %>
