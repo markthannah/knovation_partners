@@ -45,18 +45,17 @@
 
   <div class="row-fluid resource-row">
   <% @spotlight.resources.resource_type("Supporting").each do |supportingresource| %>
-    <div class="col-md-3 col-xs-6">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
       <div class="panel panel-default panel-bottom panel-border">
         <div class="panel-body">
-          <div class="pdf-thumb-box">
-            <a target="_blank" href= "<%= supportingresource.url %>">
-              <div class="pdf-thumb-box-overlay"><span class="fa-stack fa-lg">
-                <i class="fa fa-external-link fa-2x"></i>
-              </span>
-              </div>
-              <img class="img-responsive portfolio-item" <%=image_tag supportingresource.image.url(:medium)%>
-            </a>
-          </div>
+          <div class="hovereffect">
+            <img class="img-responsive portfolio-item"<%=image_tag supportingresource.image.url(:medium)%>
+              <a target="_blank" href= "<%= supportingresource.url %>">
+                <div class="overlay">
+                  <h2 class="launch_image">Click to view</h2>
+                </div>
+              </a>
+            </div>
           <a target="_blank" href= "<%= supportingresource.url %>">
             <h3><%= raw(supportingresource.title) %></h3>
           </a>
