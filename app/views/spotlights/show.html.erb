@@ -31,7 +31,7 @@
         <h2 class="section-heading">Our favorites from <%= @spotlight.publisher %> <i class="fa fa-star-o" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i></h2>
 
         <hr class="light">
-        <p class="text-faded">Here are just a few resources from <%= @spotlight.publisher.html_safe %> that we think you'll love.</p>
+        <p class="text-faded">Here are just a few resources from <%= raw @spotlight.publisher %> that we think you'll love.</p>
       </div>
     </div>
   </div>
