@@ -1,7 +1,7 @@
 <div class="show_container">
   <div class="container bg-primary1" style="width:100%">
     <div class="row">
-      <h1 class="page-header-lc"><%= @spotlight.publisher %>
+      <h1 class="page-header-lc"><%= @spotlight.publisher.html_safe %>
         <i class= "<%= @spotlight.icon %>" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i>
           <small style="color: white;">Knovation's Spotlight - <%= @spotlight.month %> <%= @spotlight.year %></small>
       </h1>
@@ -31,7 +31,7 @@
         <h2 class="section-heading">Our favorites from <%= @spotlight.publisher %> <i class="fa fa-star-o" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i></h2>
 
         <hr class="light">
-        <p class="text-faded">Here are just a few resources from <%= @spotlight.publisher %> that we think you'll love.</p>
+        <p class="text-faded">Here are just a few resources from <%= @spotlight.publisher.html_safe %> that we think you'll love.</p>
       </div>
     </div>
   </div>
