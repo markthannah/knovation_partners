@@ -34,12 +34,12 @@
 }
 
 .portfolio-item {
-  width: 100%
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .pad-contain {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 30px;
 }
 
 .description-panel{
@@ -130,6 +130,39 @@ hr.light {
   height: 300px;
   overflow-y: scroll;
 }
+@media (min-width: 0px) and (max-width: 767px) {
+  .description{
+     margin-top:20px;
+  }
+  .well-padding {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+  }
+  .panel-bottom{
+    margin-bottom: 90px;
+                }
+  .footer-small {
+    height: 60px !important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .description{
+       margin-top:20px;
+    }
+    .well-padding {
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-bottom: 0px;
+    }
+    .resource_line {
+      margin: 150px;
+      padding: 150px;
+    }
+
+}
 
 @media only screen and (max-width : 767px) {
   .box {
@@ -141,44 +174,66 @@ hr.light {
   .top-section{
     width:660px;
     padding-bottom:370.5px !important;
+    margin-top: 90px !important;
+    margin-right: 30px;
+    margin-left: 20px;
               }
+
     .panel-bottom{
       margin-bottom: 90px;
                   }
+
     .large-width {
       width:660px;
       right: 353px;
       padding-bottom: 0px;
     }
+
     .description{
        margin-bottom:0px;
     }
+
     .well-style {
       padding-left: 55px;
       padding-right: 55px;
       padding-top: 25px;
       margin-top: 20px;
     }
+    .resource_line {
+      margin-top: 100px;
+    }
 }
 
-@media (min-width: 1050px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .top-section2{
     width:555px;
     padding-bottom:312px !important;
-}
+  }
   .large-width {
     width: 555px;
     right: 296px;
     padding-bottom: 0px;
   }
   .description{
-     margin-bottom:0px;
+     margin-bottom: 0px;
+     margin-top: 25px;
   }
   .well-style {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 25px;
     margin-top: 20px;
+  }
+  .resource_line {
+    margin-top: 100px;
+  }
+  .well_margin {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .well-padding {
+    padding-top: 29px;
+    padding-bottom: 29px;
   }
 }
 
@@ -187,11 +242,12 @@ hr.light {
 }
 
 .spotlightpanel {
-   min-height: 170px;
+   min-height: 200px;
+   width: 270px;
 }
 
 .index_line {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
