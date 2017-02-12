@@ -51,11 +51,6 @@
 
 }
 
-  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    background: rgba(255, 255, 255, 0.85);
-  }
-
-
 .navbar-inverse .navbar-nav > li > a {
   color: #808080;
   font-weight: 500
@@ -177,6 +172,11 @@ li a.active:after {
   .collapse.in{
       display:block !important;
   }
+
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background: rgba(255, 255, 255, 0.75);
+  }
+
 }
 
 @media (max-width: 767px) {
