@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202022054) do
+ActiveRecord::Schema.define(version: 20170213035755) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "title"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170202022054) do
     t.datetime "image_updated_at"
     t.string   "month"
     t.integer  "year"
+    t.string   "bio"
   end
 
   create_table "users", force: :cascade do |t|
