@@ -81,6 +81,6 @@ class SpotlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spotlight_params
-      params.require(:spotlight).permit(:description, :title, :publisher, :icon, :description_title, :image, :month, :year)
+      params.require(:spotlight).permit(:description, :bio, :title, :publisher, :icon, :description_title, :image, :month, :year)
     end
 end

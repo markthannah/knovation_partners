@@ -6,6 +6,7 @@ class Spotlight < ActiveRecord::Base
   do_not_validate_attachment_file_type :image
 
   validates :publisher, presence: true
+  validates :bio, presence: true
   validates :description, presence: true
   validates :description_title, presence: true
   validates :icon, presence: true

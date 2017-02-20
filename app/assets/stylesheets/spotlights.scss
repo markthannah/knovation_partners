@@ -130,6 +130,7 @@ hr.light {
   height: 300px;
   overflow-y: scroll;
 }
+
 @media (min-width: 0px) and (max-width: 767px) {
   .description{
      margin-top:20px;
@@ -141,16 +142,20 @@ hr.light {
   }
   .panel-bottom{
     margin-bottom: 90px;
-                }
+  }
   .footer-small {
     height: 60px !important;
+  }
+  .bottom-section {
+    margin-bottom: 0px;
+    margin-top: 20px;
   }
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
     .description{
-       margin-top:20px;
+       margin-top: 20px;
     }
     .well-padding {
       padding-left: 35px;
@@ -161,7 +166,10 @@ hr.light {
       margin: 150px;
       padding: 150px;
     }
-
+    .bottom-section {
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width : 767px) {
@@ -173,35 +181,36 @@ hr.light {
 @media (min-width: 1200px) {
   .top-section{
     width:660px;
-    padding-bottom:370.5px !important;
-    margin-top: 90px !important;
-    margin-right: 30px;
+    margin-right: 10px;
     margin-left: 20px;
-              }
-
+  }
+  .bottom-section{
+    width:660px;
+    margin-top: 30px !important;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
     .panel-bottom{
       margin-bottom: 90px;
-                  }
-
+  }
     .large-width {
       width:660px;
       right: 353px;
       padding-bottom: 0px;
-    }
-
+  }
     .description{
        margin-bottom:0px;
-    }
-
-    .well-style {
-      padding-left: 55px;
-      padding-right: 55px;
-      padding-top: 25px;
-      margin-top: 20px;
-    }
+       margin-left: -20px;
+       overflow: scroll;
+       height: 614px;
+  }
+    .well-padding {
+      padding-bottom: 7px;
+      padding-top: 32px;
+  }
     .resource_line {
       margin-top: 100px;
-    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -234,6 +243,10 @@ hr.light {
   .well-padding {
     padding-top: 29px;
     padding-bottom: 29px;
+  }
+  .bottom-section {
+    margin-bottom: 0px;
+    margin-top: 20px;
   }
 }
 
