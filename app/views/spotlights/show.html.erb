@@ -11,14 +11,19 @@
     <div class="container pad-contain">
       <div class="well well-lg well-padding">
         <div class="row well_margin">
-          <div class="col-lg-8 col-md-12 col-sm-12">
+
+          <div class="col-lg-4 col-md-12 col-sm-12 panel panel-default description">
+            <h3 style="color: #089de3"><%= raw(@spotlight.description_title) %></h3>
+            <p style="white-space: pre-wrap;"><%= raw(@spotlight.description) %></p>
+          </div>
+
+          <div class="col-lg-8 col-md-12 col-sm-12" style="padding-left: 25px;">
             <div class="row">
 
               <div class="embed-responsive embed-responsive-16by9 col-md-12 top-section">
                 <% @spotlight.resources.resource_type("Featured").each do |featuredresource| %>
                 <iframe class="embed-responsive-item" src="<%= featuredresource.url %>"> </iframe>
               </div>
-
 
               <div class="col-md-12 panel panel-default bottom-section">
                 <h4 style="color: grey">Information About <%= raw(@spotlight.publisher) %></h4>
@@ -62,19 +67,12 @@
 
                 </p>
               </div>
-
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-12 col-sm-12 panel panel-default description">
-            <h3 style="color: #089de3"><%= raw(@spotlight.description_title) %></h3>
-            <p style="white-space: pre-wrap;"><%= raw(@spotlight.description) %></p>
-          </div>
-
-          <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
+  </div>
 
   <div class="container bg-primary2" style="width:100%">
     <div class="row">
@@ -103,7 +101,9 @@
             <a target="_blank" href= "<%= supportingresource.url %>">
               <h3><%= raw(supportingresource.title) %></h3>
             </a>
-            <p><%= raw(supportingresource.description) %></p>
+            <div class="resource-description">
+              <p><%= raw(supportingresource.description) %></p>
+            </div>
           </div>
         </div>
       </div>

@@ -132,9 +132,7 @@ hr.light {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  .description{
-     margin-top:20px;
-  }
+
   .well-padding {
     padding-left: 35px;
     padding-right: 35px;
@@ -147,16 +145,13 @@ hr.light {
     height: 60px !important;
   }
   .bottom-section {
-    margin-bottom: 0px;
     margin-top: 20px;
   }
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .description{
-       margin-top: 20px;
-    }
+
     .well-padding {
       padding-left: 35px;
       padding-right: 35px;
@@ -167,7 +162,6 @@ hr.light {
       padding: 150px;
     }
     .bottom-section {
-      margin-bottom: 0px;
       margin-top: 20px;
     }
 }
@@ -200,16 +194,21 @@ hr.light {
   }
     .description{
        margin-bottom:0px;
-       margin-left: -20px;
        overflow: scroll;
        height: 598px;
   }
     .well-padding {
       padding-bottom: 7px;
       padding-top: 32px;
+      padding-left: 45px;
+      padding-right: 35px;
   }
     .resource_line {
       margin-top: 100px;
+  }
+  .resource-description {
+    height: 300px;
+    overflow: scroll;
   }
 }
 
@@ -223,10 +222,7 @@ hr.light {
     right: 296px;
     padding-bottom: 0px;
   }
-  .description{
-     margin-bottom: 0px;
-     margin-top: 25px;
-  }
+
   .well-style {
     padding-left: 40px;
     padding-right: 40px;
@@ -247,6 +243,10 @@ hr.light {
   .bottom-section {
     margin-bottom: 0px;
     margin-top: 20px;
+  }
+  .resource-description {
+    height: 200px;
+    overflow: scroll;
   }
 }
 
