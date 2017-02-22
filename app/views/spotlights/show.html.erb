@@ -98,9 +98,11 @@
                   </div>
                 </a>
               </div>
-            <a target="_blank" href= "<%= supportingresource.url %>">
-              <h3><%= raw(supportingresource.title) %></h3>
-            </a>
+              <div class="resource_title">
+                <a target="_blank" href= "<%= supportingresource.url %>">
+                  <h4><%= supportingresource.title.truncate(60).html_safe %></h4>
+                </a>
+              </div>
             <div class="resource-description">
               <p><%= raw(supportingresource.description) %></p>
             </div>

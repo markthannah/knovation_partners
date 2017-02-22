@@ -195,7 +195,7 @@ hr.light {
     .description{
        margin-bottom:0px;
        overflow: scroll;
-       height: 598px;
+       height: 581px;
   }
     .well-padding {
       padding-bottom: 7px;
@@ -209,6 +209,9 @@ hr.light {
   .resource-description {
     height: 300px;
     overflow: scroll;
+  }
+  .resource_title {
+    height:185px;
   }
 }
 
