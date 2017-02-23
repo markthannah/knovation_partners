@@ -13,4 +13,7 @@ class Spotlight < ActiveRecord::Base
   validates :month, presence: true
   validates :year, presence: true
 
+  extend FriendlyId
+  friendly_id :publisher, use: [:slugged, :finders]
+
 end

@@ -1,10 +1,20 @@
 <div class="show_container">
   <div class="container bg-primary1" style="width:100%">
     <div class="row">
-      <h1 class="page-header-lc"><%= @spotlight.publisher.html_safe %>
+      <span class = "rwd-line">
+        <h1 class="page-header-lc"><%= @spotlight.publisher.html_safe %>
         <i class= "<%= @spotlight.icon %>" aria-hidden="true" style="padding-left: 10px; padding-right: 10px;"></i>
-          <small style="color: white;">Knovation's Spotlight - <%= @spotlight.month %> <%= @spotlight.year %></small>
-      </h1>
+      </span>
+
+      <span class = "rwd-line">
+        <small style="color: white;">Knovation's Spotlight:
+      </span>
+
+      <span class = "rwd-line">
+        <%= @spotlight.month %> <%= @spotlight.year %></small>
+       </h1>
+     </span>
+
     </div>
   </div>
 
@@ -91,7 +101,7 @@
         <div class="panel panel-default panel-bottom panel-border">
           <div class="panel-body">
             <div class="hovereffect">
-              <img class="img-responsive portfolio-item"<%=image_tag supportingresource.image.url(:medium)%>
+              <%=image_tag(supportingresource.image.url(:medium), :class => "img-responsive portfolio-item", :alt => "Responsive image")%>
                 <a target="_blank" href= "<%= supportingresource.url %>">
                   <div class="overlay">
                     <h2 class="launch_image">Click to view</h2>

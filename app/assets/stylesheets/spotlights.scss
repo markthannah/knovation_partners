@@ -147,6 +147,12 @@ hr.light {
   .bottom-section {
     margin-top: 20px;
   }
+  .rwd-line {
+    display: block;
+  }
+  .resource_line {
+    margin-bottom: 150px;
+  }
 }
 
 
@@ -158,8 +164,8 @@ hr.light {
       padding-bottom: 0px;
     }
     .resource_line {
-      margin: 150px;
-      padding: 150px;
+      margin: 120px;
+      padding: 120px;
     }
     .bottom-section {
       margin-top: 20px;
@@ -170,11 +176,6 @@ hr.light {
     }
 }
 
-@media only screen and (max-width : 767px) {
-  .box {
-    height: auto !important;
-  }
-}
 
 @media (min-width: 1200px) {
   .top-section{
