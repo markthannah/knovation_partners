@@ -188,6 +188,7 @@ hr.light {
     margin-top: 30px !important;
     margin-right: 10px;
     margin-left: 20px;
+    height: 172px;
   }
     .panel-bottom{
       margin-bottom: 90px;
@@ -199,8 +200,9 @@ hr.light {
   }
     .description{
        margin-bottom:0px;
-       overflow: scroll;
+       overflow: hidden;
        height: 581px;
+
   }
     .well-padding {
       padding-bottom: 7px;
@@ -353,4 +355,18 @@ hr.light {
 .launch_image {
   margin-top:12%;
   margin-bottom:20%;
+}
+
+.more_button {
+  margin-right: -15.9px;
+  margin-bottom: -34.5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.more_button_bio {
+  margin-right: -15.9px;
+  margin-bottom: -131.5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
 }

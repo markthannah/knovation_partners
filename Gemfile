@@ -18,7 +18,7 @@ gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '< 2.0'
 gem 'bootstrap-table-rails'
 gem 'friendly_id', '~> 5.1.0'
-
+gem 'jquery-dotdotdot-rails', '~> 1.6', '>= 1.6.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

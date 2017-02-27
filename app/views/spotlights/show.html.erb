@@ -24,8 +24,45 @@
 
           <div class="col-lg-4 col-md-12 col-sm-12 panel panel-default description">
             <h3 style="color: #089de3"><%= raw(@spotlight.description_title) %></h3>
-            <p style="white-space: pre-wrap;"><%= raw(@spotlight.description) %></p>
-          </div>
+            <% if @spotlight.description.length > 800 %>
+              <p style="white-space: pre-wrap;"><%= raw @spotlight.description.truncate(800) %>
+
+                <!-- Bio Modal Button -->
+                <div style= "text-align: right; margin-top: -10px;">
+                <button type="button" class="btn btn-outline btn-info btn-sm more_button" data-toggle="modal" data-target="#BioModal-">
+                 More <span class="fa fa-external-link icpad"></span>
+                </button>
+
+                <!-- Bio Modal -->
+                <div id="BioModal-" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Bio Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header" style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Information About <%=@spotlight.publisher%></h4>
+                      </div>
+                      <div class="modal-body" style="text-align:left;">
+                        <p>
+                          <%=raw @spotlight.description %>
+                        </p>
+
+                        </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            <% else %>
+              <p style="white-space: pre-wrap;"><%= raw (@spotlight.description) %>
+            <% end %>
+
+            </p>
+        </div>
 
           <div class="col-lg-8 col-md-12 col-sm-12" style="padding-left: 25px;">
             <div class="row">
@@ -39,11 +76,11 @@
                 <h4 style="color: grey">Information About <%= raw(@spotlight.publisher) %></h4>
 
                 <% if @spotlight.bio.length > 400 %>
-                  <p style="white-space: pre-wrap;"><%= raw @spotlight.bio.truncate(400) %>
+                  <p style="white-space: pre-wrap;"><%= raw @spotlight.bio.truncate(200) %>
 
                     <!-- Bio Modal Button -->
                     <div style= "text-align: right; margin-top: -10px;">
-                    <button type="button" class="btn btn-outline btn-info btn-sm" data-toggle="modal" data-target="#BioModal-">
+                    <button type="button" class="btn btn-outline btn-info btn-sm more_button_bio" data-toggle="modal" data-target="#BioModal-">
                      More <span class="fa fa-external-link icpad"></span>
                     </button>
 

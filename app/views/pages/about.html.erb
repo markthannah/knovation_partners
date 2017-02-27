@@ -1,0 +1,34 @@
+<h1>Line Clampin' (with JavaScript)</h1>
+
+<h2>TextOverflowClamp.js Way</h2>
+<div class="module">
+  <p id="js-toclamp">Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<h2>Clamp.js Way</h2>
+<div class="module js">
+  <p id="js-clamp">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<p><strong>What's the difference?</strong> Clamp.js removes original text content. TextOverflowClamp.js retains all original text and instead relies on CSS' <code>text-overflow: ellipsis;</code></p>
+<p>It also has a "side effect": each line is dedicated it's own span element. You can use this to style any line. Use <code>clamp(element, 0)</code> to give span to all lines.</p>
+<h3>Limitations</h3>
+<p>Not compatible with padding, text-indent and probably some other stylings.</p>
+<hr />
+<h1>Line Clampin' (CSS only)</h1>
+
+<h2>Weird WebKit Flexbox Way</h2>
+<div class="module line-clamp">
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<h2>Fade Out Way</h2>
+<div class="module fade">
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<h2>Opera Overflow Way</h2>
+<div class="module last-line">
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
