@@ -24,17 +24,17 @@
 
           <div class="col-lg-4 col-md-12 col-sm-12 panel panel-default description">
             <h3 style="color: #089de3"><%= raw(@spotlight.description_title) %></h3>
-            <% if @spotlight.description.length > 800 %>
-              <p style="white-space: pre-wrap;"><%= raw @spotlight.description.truncate(800) %>
+            <% if @spotlight.description.length > 1100 %>
+              <p style="white-space: pre-wrap;"><%= raw @spotlight.description.truncate(1100) %>
 
                 <!-- Bio Modal Button -->
                 <div style= "text-align: right; margin-top: -10px;">
-                <button type="button" class="btn btn-outline btn-info btn-sm more_button" data-toggle="modal" data-target="#BioModal-">
+                <button type="button" class="btn btn-outline btn-info btn-sm more_button" data-toggle="modal" data-target="#DescModal-">
                  More <span class="fa fa-external-link icpad"></span>
                 </button>
 
                 <!-- Bio Modal -->
-                <div id="BioModal-" class="modal fade" role="dialog">
+                <div id="DescModal-" class="modal fade" role="dialog">
                   <div class="modal-dialog">
 
                     <!-- Bio Modal content-->
@@ -75,8 +75,8 @@
               <div class="col-md-12 panel panel-default bottom-section">
                 <h4 style="color: grey">Information About <%= raw(@spotlight.publisher) %></h4>
 
-                <% if @spotlight.bio.length > 400 %>
-                  <p style="white-space: pre-wrap;"><%= raw @spotlight.bio.truncate(200) %>
+                <% if @spotlight.bio.length > 250 %>
+                  <p style="white-space: pre-wrap;"><%= raw @spotlight.bio.truncate(250) %>
 
                     <!-- Bio Modal Button -->
                     <div style= "text-align: right; margin-top: -10px;">
@@ -150,9 +150,9 @@
                   <h4><%= supportingresource.title.truncate(60).html_safe %></h4>
                 </a>
               </div>
-              <% if @spotlight.description.length > 520 %>
+              <% if @spotlight.description.length > 380 %>
                 <div class="resource-description">
-                  <p><%= supportingresource.description.truncate(520).html_safe %></p>
+                  <p><%= supportingresource.description.truncate(380).html_safe %></p>
 
                   <!-- Bio Modal Button -->
                   <div style= "text-align: right; margin-top: -10px;">

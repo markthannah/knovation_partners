@@ -138,6 +138,9 @@ hr.light {
     padding-right: 35px;
     padding-bottom: 0px;
   }
+  .resource-description{
+    overflow: hidden;
+  }
   .panel-bottom{
     margin-bottom: 90px;
   }
@@ -187,8 +190,8 @@ hr.light {
       padding-bottom: 35px;
     }
     .resource-description {
-      height: 150px;
-      overflow: scroll;
+      height: 170px;
+      overflow: hidden;
     }
     .description {
       padding-bottom: 35px;
@@ -230,7 +233,6 @@ hr.light {
        margin-bottom:0px;
        overflow: hidden;
        height: 585px;
-
   }
     .well-padding {
       padding-bottom: 7px;
@@ -242,8 +244,8 @@ hr.light {
       margin-top: 100px;
   }
   .resource-description {
-    height: 300px;
-    overflow: scroll;
+    height: 250px;
+    overflow: hidden;
   }
   .more_button_resource {
     border-top-right-radius: 0;
@@ -266,7 +268,6 @@ hr.light {
     right: 296px;
     padding-bottom: 0px;
   }
-
   .well-style {
     padding-left: 40px;
     padding-right: 40px;
@@ -291,7 +292,7 @@ hr.light {
   }
   .resource-description {
     height: 150px;
-    overflow: scroll;
+    overflow: hidden;
   }
   .description{
     padding-bottom: 35px;
