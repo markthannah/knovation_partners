@@ -15,6 +15,10 @@
 
       <div class="row">
         <div class="col-md-7">
+          <div>
+            <%= f.label :active %>
+            <%= f.select(:active, options_for_select([['Yes', true], ['No', false]], {:selected => @spotlight.active}),:prompt => "Select") %>
+          </div>
         </div>
         <div class="col-md-5">
           <div class=  "well-spotlight">
@@ -36,7 +40,7 @@
           </div>
         </div>
       </div>
-
+</br>
       <div class="form-group">
         <%= f.label :publisher %><br>
         <%= f.text_field :publisher, class: "form-control" %>

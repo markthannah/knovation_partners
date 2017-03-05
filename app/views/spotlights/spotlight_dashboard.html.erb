@@ -1,6 +1,6 @@
 <div class="container faqs-container">
-  <div style="margin-bottom: 70px;">
-    <h2>Spotlight Dashboard</h2>
+  <div style="margin-bottom: 70px; margin-top: 50px;">
+    <h2>Active Spotlights</h2>
     <%= link_to 'New Spotlight', new_spotlight_path, class: "btn btn-primary pull-right" %>
     <br>  <br>   <br>
     <div>
@@ -10,7 +10,50 @@
           <tr>
             <th class="dashboard-table-rows">Publisher</th>
             <th class="dashboard-table-rows">Month</th>
-            <th class="dashboard-table-rows">Title</th>
+            <th class="dashboard-table-rows">Publisher Info</th>
+            <th class="dashboard-table-rows">Description</th>
+            <th class="edit-collumn"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% @spotlights.each do |spotlight| %>
+              <% if spotlight.active == true %>
+                  <tr>
+                    <td>
+                    <%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %>
+                    <%= link_to spotlight_path(spotlight) do %>
+                      <%= spotlight.publisher %>
+                    <% end %></td>
+                    <td><%= spotlight.month %> <%= spotlight.year %></td>
+                    <td><%= raw spotlight.bio.truncate(80)%></td>
+                    <td><%= raw spotlight.description.truncate(80)%></td>
+                    <td class="vert-align"><%= link_to edit_spotlight_path(spotlight), class:"btn btn-primary", :method => :get do %>
+                      <span class="fa fa-edit"></span> Edit
+                    <% end %>
+                      <%= link_to spotlight, method: :delete, data: { confirm: 'Are you sure you want to delete this spotlight?' }, class: "btn btn-danger" do %>
+                      <span class="fa fa-trash-o"></span> Delete
+                    <% end %></td>
+                  </tr>
+              <% end %>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 70px;">
+    <h2>Inactive Spotlights</h2>
+    <%= link_to 'New Spotlight', new_spotlight_path, class: "btn btn-primary pull-right" %>
+    <br>  <br>   <br>
+    <div>
+      <!-- Table -->
+      <table class= "table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="dashboard-table-rows">Publisher</th>
+            <th class="dashboard-table-rows">Month</th>
+            <th class="dashboard-table-rows">Publisher Info</th>
             <th class="dashboard-table-rows">Description</th>
             <th class="edit-collumn"></th>
           </tr>
@@ -18,25 +61,28 @@
 
         <tbody>
           <% @spotlights.each do |spotlight| %>
-              <tr>
-                <td>
-                <%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %>
-                <%= link_to spotlight_path(spotlight) do %>
-                  <%= spotlight.publisher %>
-                <% end %></td>
-                <td><%= spotlight.month %> <%= spotlight.year %></td>
-                <td><%= spotlight.title%></td>
-                <td><%= raw spotlight.description.truncate(60)%></td>
-                <td class="vert-align"><%= link_to edit_spotlight_path(spotlight), class:"btn btn-primary", :method => :get do %>
-                  <span class="fa fa-edit"></span> Edit
-                <% end %>
-                  <%= link_to spotlight, method: :delete, data: { confirm: 'Are you sure you want to delete this spotlight?' }, class: "btn btn-danger" do %>
-                  <span class="fa fa-trash-o"></span> Delete
-                <% end %></td>
-              </tr>
+            <% if spotlight.active == false %>
+                <tr>
+                  <td>
+                  <%= link_to image_tag(spotlight.image.url(:thumb)), spotlight %>
+                  <%= link_to spotlight_path(spotlight) do %>
+                    <%= spotlight.publisher %>
+                  <% end %></td>
+                  <td><%= spotlight.month %> <%= spotlight.year %></td>
+                  <td><%= raw spotlight.bio.truncate(80)%></td>
+                  <td><%= raw spotlight.description.truncate(80)%></td>
+                  <td class="vert-align"><%= link_to edit_spotlight_path(spotlight), class:"btn btn-primary", :method => :get do %>
+                    <span class="fa fa-edit"></span> Edit
+                  <% end %>
+                    <%= link_to spotlight, method: :delete, data: { confirm: 'Are you sure you want to delete this spotlight?' }, class: "btn btn-danger" do %>
+                    <span class="fa fa-trash-o"></span> Delete
+                  <% end %></td>
+                </tr>
+              <% end %>
             <% end %>
         </tbody>
       </table>
     </div>
   </div>
+
 </div>

@@ -3,19 +3,21 @@
     <div id="spotlights" class="transitions-enabled">
       <div class="row">
         <% @spotlights.each do |spotlight| %>
-          <div class="col-sm-6 col-md-6 box">
-            <div class="panel panel-default spotlightpanel">
-              <div>
-                <%= link_to image_tag(spotlight.image.url(:medium)), spotlight %>
-              </div>
-              <div class="panel-body">
-                <h4><%= raw spotlight.publisher %></h4>
-                <p align="left"><%= spotlight.description.truncate(270).html_safe %><p>
-                  <hr class="index_line">
-                <%= spotlight.month %> <%= spotlight.year %>
+          <% if spotlight.active == true %>
+            <div class="col-sm-6 col-md-6 box">
+              <div class="panel panel-default spotlightpanel">
+                <div>
+                  <%= link_to image_tag(spotlight.image.url(:medium)), spotlight %>
+                </div>
+                <div class="panel-body">
+                  <h4><%= raw spotlight.publisher %></h4>
+                  <p align="left"><%= spotlight.description.truncate(270).html_safe %><p>
+                    <hr class="index_line">
+                  <%= spotlight.month %> <%= spotlight.year %>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
       </div>
     </div>
