@@ -24,16 +24,16 @@
               <li> <%=link_to "Resource Dashboard", resource_dashboard_path %> </li>
             </ul>
           </li>
+          <% end %>
 
-          <li> <%=link_to "Spotlights", spotlights_path, 'data-turbolinks' => false %> </li>
+        <li> <%=link_to "Spotlights", spotlights_path, 'data-turbolinks' => false %> </li>
           <li class="divider-vertical"> </li>
-        <% end %>
         <li> <%=link_to "Language Arts", ela_path%> </li>
         <li> <%=link_to "Math", math_path%> </li>
         <li> <%=link_to "Science", science_path%> </li>
         <li> <%=link_to "Social Studies", socialstudies_path%> </li>
         <li> <%=link_to "Fine Arts", finearts_path%> </li>
-        <li class="divider-vertical"> </li>
+          <li class="divider-vertical"> </li>
         <li> <%=link_to "FAQs", faqs_path%></li>
         <li> <%=link_to "Contact Us", 'http://www.knovationlearning.com/contact-us/',target: "_blank"%></li>
       </ul>
