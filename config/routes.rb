@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   get "about" => "pages#about"
+  get "rubric" => "pages#rubric"
   get "faqs" => "pages#faqs"
   get "integrations" => "pages#integrations"
   get "curation" => "pages#curation"

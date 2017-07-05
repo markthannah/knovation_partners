@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def integrations
   end
 
+  def rubric
+  end
+
   def contextualization
   end
 
