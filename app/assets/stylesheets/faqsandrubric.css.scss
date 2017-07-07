@@ -56,7 +56,7 @@
     background-color: #ffffff;
     border: 1px solid #dddddd;
     color: #777777;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .tab-width {
@@ -69,8 +69,8 @@
   background-color: white;
   border-style: solid;
   color: #337ab7;
-  border-color: #337ab7;
-  border-width: thin;
+  border-color: #ddd;
+  border-width: 2px;
 }
 
 .rubric-text {
@@ -110,10 +110,10 @@
 }
 
 .rubric-description {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: left;
-  font-weight: 200;
-  font-size: 18px;
+  font-weight: 120;
+  font-size: 16px;
   color: gray;
 }
 
@@ -122,4 +122,16 @@
   margin-bottom: -5px;
   text-align: center;
   color: gray;
+}
+
+.shape-text{
+	color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap;
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-webkit-transform:rotate(30deg); /* Safari and Chrome */
+	transform:rotate(30deg);
+}
+
+.commons-style {
+  margin-bottom: 100px;
+  margin-right: 50px;
 }
