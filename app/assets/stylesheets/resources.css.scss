@@ -199,6 +199,14 @@ b.subject-lead {
   color:#D2681B;
 }
 
+.subjecttext {
+  font-weight: 200;
+  font-size: 22px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 @media (max-width: 991px) and (min-width: 30px) {
   h1.results-lead {
     color:white;
@@ -212,11 +220,3 @@ b.subject-lead {
     color:white;
   }
   }
-
-.subjecttext {
-  font-weight: 200;
-  font-size: 22px;
-  color: gray;
-  text-align: center;
-  margin-bottom: 50px;
-}

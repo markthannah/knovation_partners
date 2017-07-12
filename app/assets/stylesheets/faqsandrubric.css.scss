@@ -49,6 +49,7 @@
   padding-bottom: 40px;
 }
 
+
 // Rubric css
 
 .rubric-cat-tabs li a {
@@ -134,4 +135,94 @@
 .commons-style {
   margin-bottom: 100px;
   margin-right: 50px;
+  margin-top: 50px;
 }
+
+.btn-group {
+  display: flex !important;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .panel-responsive {
+    width: 82%;
+  }
+  .rubric-cat-tabs li a {
+    font-size: 17px;
+  }
+  .badge-rubric {
+    margin-right: 15px;
+  }
+  .panel-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .panel-responsive {
+    width: 82%;
+  }
+  .rubric-cat-tabs li a {
+    font-size: 15px;
+  }
+  .fixed {
+    width: 140px;
+  }
+  .small-pad {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .badge-rubric {
+    margin-right: 10px;
+  }
+  .panel-title {
+    font-size: 14px;
+  }
+}
+
+  @media (max-width: 767px) and (min-width: 712px) {
+  .panel-responsive {
+    width: 80%;
+  }
+  .fixed {
+    width: 140px;
+    }
+  .panel-title {
+    font-size: 14px;
+  }
+  .rubric-cat-tabs li a {
+    font-size: 14px;
+  }
+  .badge-rubric {
+    margin-right: 5px;
+  }
+  .small-pad {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  }
+
+  @media (max-width: 767px) and (min-width: 5px) {
+    .panel-responsive {
+      width: 80%;
+    }
+    .fixed {
+      width: 140px;
+      }
+    .panel-title {
+      font-size: 12px;
+    }
+    .rubric-cat-tabs li a {
+      font-size: 12px;
+    }
+    .badge-rubric {
+      margin-right: 10px;
+    }
+    .small-pad {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .badge-rubric {
+      display:none;
+    }
+
+    }
